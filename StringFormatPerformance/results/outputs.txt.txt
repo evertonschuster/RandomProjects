@@ -1,0 +1,786 @@
+        Method  SearchTextSearch  ReplaceTextSearch    TextSize            Mean          Error         StdDev          Median     Gen0     Gen1     Gen2  Allocated 
+-------------- ----------------- ------------------ ----------- --------------------------------------------------------------------------------------------
+ StringReplace        replace1_1         replace1_1      text10        7.365 ns      0.0148 ns      0.0124 ns        7.367 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace1_1      text10       58.241 ns      0.4458 ns      0.4170 ns       58.036 ns        -        -        -          - 
+ StringReplace        replace1_1         replace1_1      text50        7.375 ns      0.0104 ns      0.0092 ns        7.378 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace1_1      text50       58.113 ns      0.1124 ns      0.0939 ns       58.125 ns        -        -        -          - 
+ StringReplace        replace1_1         replace1_1     text100        7.356 ns      0.0191 ns      0.0159 ns        7.362 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace1_1     text100       61.134 ns      0.0693 ns      0.0541 ns       61.124 ns        -        -        -          - 
+ StringReplace        replace1_1         replace1_1     text500        7.392 ns      0.0127 ns      0.0113 ns        7.392 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace1_1     text500      417.552 ns      1.6036 ns      1.4216 ns      416.951 ns   0.2174        -        -     1024 B 
+ StringReplace        replace1_1         replace1_1   text1_000        7.787 ns      0.0195 ns      0.0183 ns        7.790 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace1_1   text1_000      579.987 ns      2.3650 ns      2.2122 ns      580.292 ns   0.4301        -        -     2024 B 
+ StringReplace        replace1_1         replace1_1   text5_000        7.558 ns      0.0820 ns      0.0767 ns        7.570 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace1_1   text5_000    1,559.378 ns     17.1094 ns     16.8037 ns    1,557.935 ns   2.1267        -        -    10024 B 
+ StringReplace        replace1_1         replace1_1  text10_000        7.373 ns      0.0414 ns      0.0387 ns        7.351 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace1_1  text10_000    2,624.515 ns     20.2879 ns     18.9773 ns    2,615.114 ns   4.2343        -        -    20024 B 
+ StringReplace        replace1_1         replace1_1  text50_000        7.591 ns      0.0196 ns      0.0183 ns        7.590 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace1_1  text50_000   40,057.313 ns    786.2952 ns  1,176.8897 ns   39,952.548 ns  31.1890  31.1890  31.1890   100045 B 
+ StringReplace        replace1_1         replace2_1      text10       10.157 ns      0.0235 ns      0.0184 ns       10.161 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace2_1      text10       60.148 ns      0.8103 ns      0.7579 ns       60.496 ns        -        -        -          - 
+ StringReplace        replace1_1         replace2_1      text50       14.211 ns      0.0550 ns      0.0514 ns       14.224 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace2_1      text50       61.264 ns      0.3857 ns      0.3608 ns       61.378 ns        -        -        -          - 
+ StringReplace        replace1_1         replace2_1     text100       16.306 ns      0.0562 ns      0.0525 ns       16.309 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace2_1     text100       61.793 ns      0.3883 ns      0.3442 ns       61.685 ns        -        -        -          - 
+ StringReplace        replace1_1         replace2_1     text500      141.431 ns      1.6420 ns      1.5360 ns      141.953 ns   0.2193        -        -     1032 B 
+ RegexrReplace        replace1_1         replace2_1     text500      431.458 ns      6.2165 ns      5.8149 ns      429.440 ns   0.2193        -        -     1032 B 
+ StringReplace        replace1_1         replace2_1   text1_000      255.979 ns      2.2966 ns      2.0358 ns      255.994 ns   0.4315        -        -     2032 B 
+ RegexrReplace        replace1_1         replace2_1   text1_000      637.507 ns      4.4110 ns      3.9103 ns      637.637 ns   0.4311        -        -     2032 B 
+ StringReplace        replace1_1         replace2_1   text5_000      900.763 ns     15.8852 ns     14.8590 ns      899.706 ns   2.1315        -        -    10040 B 
+ RegexrReplace        replace1_1         replace2_1   text5_000    1,604.489 ns     21.2036 ns     19.8339 ns    1,605.370 ns   2.1305        -        -    10040 B 
+ StringReplace        replace1_1         replace2_1  text10_000    2,005.523 ns     28.5300 ns     26.6870 ns    2,010.290 ns   4.2343        -        -    20040 B 
+ RegexrReplace        replace1_1         replace2_1  text10_000    2,931.112 ns     54.6725 ns     51.1407 ns    2,937.632 ns   4.2343        -        -    20040 B 
+ StringReplace        replace1_1         replace2_1  text50_000   33,963.962 ns    441.9349 ns    413.3862 ns   34,006.824 ns  31.1890  31.1890  31.1890   100123 B 
+ RegexrReplace        replace1_1         replace2_1  text50_000   36,996.029 ns    166.7559 ns    155.9836 ns   37,029.437 ns  31.1890  31.1890  31.1890   100133 B 
+ StringReplace        replace1_1         replace3_1      text10       10.104 ns      0.0725 ns      0.0642 ns       10.094 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace3_1      text10       62.365 ns      0.2004 ns      0.1875 ns       62.392 ns        -        -        -          - 
+ StringReplace        replace1_1         replace3_1      text50       14.258 ns      0.0706 ns      0.0626 ns       14.237 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace3_1      text50       61.505 ns      0.4179 ns      0.3909 ns       61.454 ns        -        -        -          - 
+ StringReplace        replace1_1         replace3_1     text100       18.106 ns      0.0613 ns      0.0544 ns       18.124 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace3_1     text100       61.289 ns      0.2112 ns      0.1872 ns       61.288 ns        -        -        -          - 
+ StringReplace        replace1_1         replace3_1     text500      143.374 ns      1.4209 ns      1.1865 ns      143.592 ns   0.2193        -        -     1032 B 
+ RegexrReplace        replace1_1         replace3_1     text500      437.964 ns      5.8031 ns      5.4283 ns      437.114 ns   0.2193        -        -     1032 B 
+ StringReplace        replace1_1         replace3_1   text1_000      244.976 ns      1.2360 ns      1.0957 ns      245.081 ns   0.4334        -        -     2040 B 
+ RegexrReplace        replace1_1         replace3_1   text1_000      609.568 ns      6.2880 ns      5.5741 ns      609.528 ns   0.4330        -        -     2040 B 
+ StringReplace        replace1_1         replace3_1   text5_000      911.052 ns     18.0247 ns     16.8603 ns      915.014 ns   2.1305        -        -    10048 B 
+ RegexrReplace        replace1_1         replace3_1   text5_000    1,565.423 ns     30.8545 ns     33.0140 ns    1,556.359 ns   2.1305        -        -    10048 B 
+ StringReplace        replace1_1         replace3_1  text10_000    2,146.879 ns     26.6005 ns     24.8821 ns    2,142.124 ns   4.2534        -        -    20056 B 
+ RegexrReplace        replace1_1         replace3_1  text10_000    2,995.018 ns     40.6340 ns     38.0090 ns    2,974.913 ns   4.2534        -        -    20056 B 
+ StringReplace        replace1_1         replace3_1  text50_000   33,358.550 ns    263.4142 ns    246.3978 ns   33,368.359 ns  31.1890  31.1890  31.1890   100203 B 
+ RegexrReplace        replace1_1         replace3_1  text50_000   36,459.610 ns    129.3613 ns    108.0225 ns   36,447.174 ns  31.1890  31.1890  31.1890   100213 B 
+ StringReplace        replace1_1         replace5_1      text10       10.501 ns      0.0772 ns      0.0722 ns       10.501 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace5_1      text10       59.907 ns      0.2619 ns      0.2321 ns       59.884 ns        -        -        -          - 
+ StringReplace        replace1_1         replace5_1      text50       15.402 ns      0.1092 ns      0.1021 ns       15.406 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace5_1      text50       62.676 ns      0.2290 ns      0.2030 ns       62.707 ns        -        -        -          - 
+ StringReplace        replace1_1         replace5_1     text100       16.120 ns      0.0940 ns      0.0879 ns       16.112 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace5_1     text100       63.117 ns      0.2446 ns      0.2168 ns       63.199 ns        -        -        -          - 
+ StringReplace        replace1_1         replace5_1     text500      144.676 ns      1.7972 ns      1.5932 ns      144.621 ns   0.2210        -        -     1040 B 
+ RegexrReplace        replace1_1         replace5_1     text500      443.309 ns      4.9015 ns      4.5849 ns      442.057 ns   0.2208        -        -     1040 B 
+ StringReplace        replace1_1         replace5_1   text1_000      248.012 ns      4.8907 ns      6.0063 ns      250.683 ns   0.4349        -        -     2048 B 
+ RegexrReplace        replace1_1         replace5_1   text1_000      610.563 ns      4.8778 ns      4.3240 ns      611.562 ns   0.4349        -        -     2048 B 
+ StringReplace        replace1_1         replace5_1   text5_000      878.533 ns     10.3673 ns      9.6976 ns      877.884 ns   2.1362        -        -    10072 B 
+ RegexrReplace        replace1_1         replace5_1   text5_000    1,562.154 ns     17.8528 ns     14.9079 ns    1,559.843 ns   2.1362        -        -    10072 B 
+ StringReplace        replace1_1         replace5_1  text10_000    1,869.703 ns     17.5389 ns     15.5478 ns    1,870.452 ns   4.2553        -        -    20088 B 
+ RegexrReplace        replace1_1         replace5_1  text10_000    2,856.443 ns     32.1250 ns     28.4780 ns    2,857.956 ns   4.2534        -        -    20088 B 
+ StringReplace        replace1_1         replace5_1  text50_000   33,662.792 ns    616.7133 ns    844.1642 ns   33,411.014 ns  31.1890  31.1890  31.1890   100371 B 
+ RegexrReplace        replace1_1         replace5_1  text50_000   38,376.569 ns    739.9975 ns    655.9885 ns   38,282.730 ns  31.1890  31.1890  31.1890   100381 B 
+ StringReplace        replace1_1         replace8_1      text10       10.524 ns      0.0702 ns      0.0657 ns       10.521 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace8_1      text10       58.657 ns      0.5064 ns      0.4737 ns       58.568 ns        -        -        -          - 
+ StringReplace        replace1_1         replace8_1      text50       14.242 ns      0.0896 ns      0.0838 ns       14.244 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace8_1      text50       59.517 ns      0.0399 ns      0.0333 ns       59.510 ns        -        -        -          - 
+ StringReplace        replace1_1         replace8_1     text100       16.066 ns      0.1607 ns      0.1503 ns       16.052 ns        -        -        -          - 
+ RegexrReplace        replace1_1         replace8_1     text100       61.208 ns      0.1472 ns      0.1229 ns       61.188 ns        -        -        -          - 
+ StringReplace        replace1_1         replace8_1     text500      133.355 ns      0.3209 ns      0.2505 ns      133.361 ns   0.2227        -        -     1048 B 
+ RegexrReplace        replace1_1         replace8_1     text500      415.946 ns      1.8790 ns      1.5691 ns      416.069 ns   0.2227        -        -     1048 B 
+ StringReplace        replace1_1         replace8_1   text1_000      232.087 ns      2.3786 ns      2.1086 ns      232.460 ns   0.4385        -        -     2064 B 
+ RegexrReplace        replace1_1         replace8_1   text1_000      580.548 ns      1.9112 ns      1.7878 ns      579.870 ns   0.4377        -        -     2064 B 
+ StringReplace        replace1_1         replace8_1   text5_000      849.757 ns      1.0220 ns      0.9060 ns      849.760 ns   2.1410        -        -    10096 B 
+ RegexrReplace        replace1_1         replace8_1   text5_000    1,546.131 ns      5.0288 ns      4.1993 ns    1,546.241 ns   2.1400        -        -    10096 B 
+ StringReplace        replace1_1         replace8_1  text10_000    1,803.750 ns     11.5223 ns     10.7779 ns    1,800.525 ns   4.2553        -        -    20120 B 
+ RegexrReplace        replace1_1         replace8_1  text10_000    2,605.544 ns     20.4473 ns     19.1264 ns    2,604.451 ns   4.2534        -        -    20120 B 
+ StringReplace        replace1_1         replace8_1  text50_000   31,769.721 ns    101.9159 ns     90.3458 ns   31,777.179 ns  31.1890  31.1890  31.1890   100539 B 
+ RegexrReplace        replace1_1         replace8_1  text50_000   35,798.694 ns    161.0553 ns    142.7713 ns   35,781.937 ns  31.1890  31.1890  31.1890   100549 B 
+ StringReplace        replace1_1        replace13_1      text10       10.399 ns      0.0374 ns      0.0350 ns       10.411 ns        -        -        -          - 
+ RegexrReplace        replace1_1        replace13_1      text10       58.232 ns      0.1086 ns      0.0907 ns       58.251 ns        -        -        -          - 
+ StringReplace        replace1_1        replace13_1      text50       15.287 ns      0.0660 ns      0.0617 ns       15.298 ns        -        -        -          - 
+ RegexrReplace        replace1_1        replace13_1      text50       58.947 ns      0.0461 ns      0.0360 ns       58.937 ns        -        -        -          - 
+ StringReplace        replace1_1        replace13_1     text100       17.643 ns      0.0623 ns      0.0583 ns       17.645 ns        -        -        -          - 
+ RegexrReplace        replace1_1        replace13_1     text100       63.830 ns      0.0447 ns      0.0396 ns       63.831 ns        -        -        -          - 
+ StringReplace        replace1_1        replace13_1     text500      152.525 ns      0.5645 ns      0.5280 ns      152.333 ns   0.2277        -        -     1072 B 
+ RegexrReplace        replace1_1        replace13_1     text500      413.525 ns      1.4963 ns      1.3996 ns      413.778 ns   0.2275        -        -     1072 B 
+ StringReplace        replace1_1        replace13_1   text1_000      232.733 ns      0.7838 ns      0.6545 ns      232.904 ns   0.4435        -        -     2088 B 
+ RegexrReplace        replace1_1        replace13_1   text1_000      577.244 ns      2.9167 ns      2.7283 ns      577.797 ns   0.4435        -        -     2088 B 
+ StringReplace        replace1_1        replace13_1   text5_000      855.053 ns      8.9853 ns      8.4049 ns      852.907 ns   2.1544        -        -    10160 B 
+ RegexrReplace        replace1_1        replace13_1   text5_000    1,480.064 ns      5.2486 ns      4.9096 ns    1,478.623 ns   2.1534        -        -    10160 B 
+ StringReplace        replace1_1        replace13_1  text10_000    1,769.187 ns     26.2981 ns     24.5992 ns    1,773.807 ns   4.2725        -        -    20200 B 
+ RegexrReplace        replace1_1        replace13_1  text10_000    2,594.804 ns     23.0264 ns     21.5389 ns    2,599.041 ns   4.2725        -        -    20200 B 
+ StringReplace        replace1_1        replace13_1  text50_000   31,802.720 ns    249.1846 ns    233.0874 ns   31,777.039 ns  31.1890  31.1890  31.1890   100963 B 
+ RegexrReplace        replace1_1        replace13_1  text50_000   36,015.700 ns    168.4809 ns    157.5971 ns   36,008.423 ns  31.1890  31.1890  31.1890   100973 B 
+ StringReplace        replace1_1        replace21_1      text10       10.097 ns      0.0575 ns      0.0538 ns       10.095 ns        -        -        -          - 
+ RegexrReplace        replace1_1        replace21_1      text10       56.558 ns      0.4121 ns      0.3442 ns       56.664 ns        -        -        -          - 
+ StringReplace        replace1_1        replace21_1      text50       14.074 ns      0.0272 ns      0.0241 ns       14.075 ns        -        -        -          - 
+ RegexrReplace        replace1_1        replace21_1      text50       62.185 ns      0.0471 ns      0.0418 ns       62.194 ns        -        -        -          - 
+ StringReplace        replace1_1        replace21_1     text100       15.442 ns      0.0370 ns      0.0309 ns       15.448 ns        -        -        -          - 
+ RegexrReplace        replace1_1        replace21_1     text100       60.378 ns      0.2075 ns      0.1941 ns       60.283 ns        -        -        -          - 
+ StringReplace        replace1_1        replace21_1     text500      138.036 ns      0.9605 ns      0.8985 ns      137.901 ns   0.2346        -        -     1104 B 
+ RegexrReplace        replace1_1        replace21_1     text500      412.745 ns      1.7195 ns      1.4359 ns      412.982 ns   0.2346        -        -     1104 B 
+ StringReplace        replace1_1        replace21_1   text1_000      255.585 ns      3.1831 ns      2.9775 ns      255.703 ns   0.4535        -        -     2136 B 
+ RegexrReplace        replace1_1        replace21_1   text1_000      588.783 ns      7.7913 ns      6.9068 ns      586.974 ns   0.4530        -        -     2136 B 
+ StringReplace        replace1_1        replace21_1   text5_000      874.684 ns      9.6709 ns      9.0461 ns      872.053 ns   2.1734        -        -    10256 B 
+ RegexrReplace        replace1_1        replace21_1   text5_000    1,492.757 ns      6.6537 ns      5.5561 ns    1,492.921 ns   2.1725        -        -    10256 B 
+ StringReplace        replace1_1        replace21_1  text10_000    1,788.378 ns     32.7194 ns     30.6057 ns    1,792.186 ns   4.3087        -        -    20328 B 
+ RegexrReplace        replace1_1        replace21_1  text10_000    2,600.155 ns     24.2819 ns     21.5253 ns    2,605.852 ns   4.3068        -        -    20328 B 
+ StringReplace        replace1_1        replace21_1  text50_000   32,089.598 ns    272.9193 ns    255.2889 ns   32,090.735 ns  32.2266  32.2266  32.2266   101635 B 
+ RegexrReplace        replace1_1        replace21_1  text50_000   35,881.175 ns    171.8798 ns    160.7764 ns   35,844.983 ns  32.2266  32.2266  32.2266   101646 B 
+ StringReplace        replace2_1         replace1_1      text10       12.630 ns      0.0250 ns      0.0234 ns       12.639 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace1_1      text10       72.706 ns      0.2409 ns      0.2011 ns       72.809 ns        -        -        -          - 
+ StringReplace        replace2_1         replace1_1      text50       16.121 ns      0.0133 ns      0.0104 ns       16.124 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace1_1      text50      159.268 ns      0.1776 ns      0.1483 ns      159.262 ns        -        -        -          - 
+ StringReplace        replace2_1         replace1_1     text100       18.313 ns      0.0788 ns      0.0658 ns       18.317 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace1_1     text100      266.555 ns      0.8080 ns      0.6747 ns      266.709 ns        -        -        -          - 
+ StringReplace        replace2_1         replace1_1     text500      144.780 ns      0.8283 ns      0.7343 ns      144.925 ns   0.2174        -        -     1024 B 
+ RegexrReplace        replace2_1         replace1_1     text500    1,518.075 ns      3.4886 ns      2.7237 ns    1,518.260 ns   0.2174        -        -     1024 B 
+ StringReplace        replace2_1         replace1_1   text1_000      246.671 ns      2.1156 ns      1.9789 ns      246.700 ns   0.4282        -        -     2016 B 
+ RegexrReplace        replace2_1         replace1_1   text1_000    2,836.311 ns      3.5156 ns      3.1165 ns    2,836.054 ns   0.4272        -        -     2016 B 
+ StringReplace        replace2_1         replace1_1   text5_000      985.011 ns      5.4123 ns      4.5195 ns      984.137 ns   2.1229        -        -    10000 B 
+ RegexrReplace        replace2_1         replace1_1   text5_000   13,756.232 ns     18.6942 ns     15.6105 ns   13,755.817 ns   2.1210        -        -    10000 B 
+ StringReplace        replace2_1         replace1_1  text10_000    2,148.027 ns     19.3942 ns     17.1925 ns    2,153.837 ns   4.2343        -        -    19976 B 
+ RegexrReplace        replace2_1         replace1_1  text10_000   28,194.429 ns     47.6945 ns     44.6135 ns   28,193.271 ns   4.2114        -        -    19976 B 
+ StringReplace        replace2_1         replace1_1  text50_000   32,887.352 ns    156.7015 ns    146.5786 ns   32,852.148 ns  31.1890  31.1890  31.1890    99803 B 
+ RegexrReplace        replace2_1         replace1_1  text50_000  163,453.486 ns    230.8561 ns    215.9430 ns  163,529.395 ns  31.0059  31.0059  31.0059    99815 B 
+ StringReplace        replace2_1         replace2_1      text10       12.632 ns      0.0468 ns      0.0415 ns       12.647 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace2_1      text10       74.803 ns      0.1321 ns      0.1236 ns       74.799 ns        -        -        -          - 
+ StringReplace        replace2_1         replace2_1      text50       16.804 ns      0.1643 ns      0.1537 ns       16.718 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace2_1      text50      160.531 ns      0.6090 ns      0.5399 ns      160.435 ns        -        -        -          - 
+ StringReplace        replace2_1         replace2_1     text100       18.263 ns      0.0660 ns      0.0617 ns       18.287 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace2_1     text100      266.362 ns      0.5808 ns      0.5433 ns      266.505 ns        -        -        -          - 
+ StringReplace        replace2_1         replace2_1     text500      149.091 ns      1.7868 ns      1.6713 ns      149.023 ns   0.2174        -        -     1024 B 
+ RegexrReplace        replace2_1         replace2_1     text500    1,508.939 ns      2.8138 ns      2.6321 ns    1,508.905 ns   0.2174        -        -     1024 B 
+ StringReplace        replace2_1         replace2_1   text1_000      254.067 ns      3.9954 ns      3.7373 ns      255.436 ns   0.4301        -        -     2024 B 
+ RegexrReplace        replace2_1         replace2_1   text1_000    2,851.075 ns     13.8828 ns     12.3068 ns    2,849.165 ns   0.4272        -        -     2024 B 
+ StringReplace        replace2_1         replace2_1   text5_000    1,046.428 ns     11.0043 ns     10.2934 ns    1,048.749 ns   2.1267        -        -    10024 B 
+ RegexrReplace        replace2_1         replace2_1   text5_000   13,839.208 ns     93.8788 ns     87.8143 ns   13,807.663 ns   2.1210        -        -    10024 B 
+ StringReplace        replace2_1         replace2_1  text10_000    2,167.520 ns     12.4397 ns     11.0275 ns    2,169.729 ns   4.2343        -        -    20024 B 
+ RegexrReplace        replace2_1         replace2_1  text10_000   29,071.927 ns     53.5352 ns     50.0769 ns   29,085.916 ns   4.2114        -        -    20024 B 
+ StringReplace        replace2_1         replace2_1  text50_000   33,220.487 ns    133.5783 ns    118.4137 ns   33,227.533 ns  31.1890  31.1890  31.1890   100035 B 
+ RegexrReplace        replace2_1         replace2_1  text50_000  163,204.297 ns    403.3569 ns    336.8213 ns  163,216.724 ns  31.0059  31.0059  31.0059   100045 B 
+ StringReplace        replace2_1         replace3_1      text10       12.601 ns      0.0611 ns      0.0571 ns       12.615 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace3_1      text10       68.001 ns      0.2189 ns      0.1941 ns       68.003 ns        -        -        -          - 
+ StringReplace        replace2_1         replace3_1      text50       16.135 ns      0.0195 ns      0.0152 ns       16.133 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace3_1      text50      160.301 ns      0.1827 ns      0.1709 ns      160.311 ns        -        -        -          - 
+ StringReplace        replace2_1         replace3_1     text100       16.894 ns      0.0594 ns      0.0496 ns       16.894 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace3_1     text100      268.375 ns      0.9354 ns      0.7811 ns      268.668 ns        -        -        -          - 
+ StringReplace        replace2_1         replace3_1     text500      166.953 ns      1.7352 ns      1.6232 ns      166.998 ns   0.2193        -        -     1032 B 
+ RegexrReplace        replace2_1         replace3_1     text500    1,517.126 ns      3.1184 ns      2.7644 ns    1,516.749 ns   0.2193        -        -     1032 B 
+ StringReplace        replace2_1         replace3_1   text1_000      247.860 ns      1.8664 ns      1.6545 ns      247.303 ns   0.4315        -        -     2032 B 
+ RegexrReplace        replace2_1         replace3_1   text1_000    2,858.952 ns     49.5581 ns     43.9320 ns    2,838.695 ns   0.4311        -        -     2032 B 
+ StringReplace        replace2_1         replace3_1   text5_000    1,205.251 ns      7.6438 ns      6.7760 ns    1,203.697 ns   2.1305        -        -    10048 B 
+ RegexrReplace        replace2_1         replace3_1   text5_000   13,853.668 ns     23.4179 ns     21.9051 ns   13,854.950 ns   2.1210        -        -    10048 B 
+ StringReplace        replace2_1         replace3_1  text10_000    2,135.713 ns     23.9335 ns     22.3874 ns    2,130.764 ns   4.2534        -        -    20072 B 
+ RegexrReplace        replace2_1         replace3_1  text10_000   28,205.456 ns     37.4390 ns     35.0205 ns   28,202.927 ns   4.2419        -        -    20072 B 
+ StringReplace        replace2_1         replace3_1  text50_000   33,433.249 ns    150.0556 ns    140.3621 ns   33,442.767 ns  31.1890  31.1890  31.1890   100267 B 
+ RegexrReplace        replace2_1         replace3_1  text50_000  165,206.698 ns  1,253.8137 ns  1,111.4732 ns  164,780.640 ns  31.0059  31.0059  31.0059   100277 B 
+ StringReplace        replace2_1         replace5_1      text10       12.647 ns      0.0364 ns      0.0323 ns       12.649 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace5_1      text10       69.620 ns      0.2600 ns      0.2305 ns       69.582 ns        -        -        -          - 
+ StringReplace        replace2_1         replace5_1      text50       16.146 ns      0.0160 ns      0.0150 ns       16.142 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace5_1      text50      159.120 ns      0.1911 ns      0.1787 ns      159.207 ns        -        -        -          - 
+ StringReplace        replace2_1         replace5_1     text100       16.908 ns      0.0626 ns      0.0555 ns       16.930 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace5_1     text100      268.740 ns      0.2454 ns      0.2176 ns      268.754 ns        -        -        -          - 
+ StringReplace        replace2_1         replace5_1     text500      146.325 ns      1.4501 ns      1.3564 ns      146.853 ns   0.2210        -        -     1040 B 
+ RegexrReplace        replace2_1         replace5_1     text500    1,481.892 ns      3.2322 ns      3.0234 ns    1,480.563 ns   0.2193        -        -     1040 B 
+ StringReplace        replace2_1         replace5_1   text1_000      245.057 ns      3.3745 ns      2.9914 ns      246.757 ns   0.4334        -        -     2040 B 
+ RegexrReplace        replace2_1         replace5_1   text1_000    2,853.059 ns      6.1068 ns      5.4135 ns    2,852.416 ns   0.4311        -        -     2040 B 
+ StringReplace        replace2_1         replace5_1   text5_000    1,004.214 ns      9.2450 ns      8.1954 ns    1,004.768 ns   2.1400        -        -    10088 B 
+ RegexrReplace        replace2_1         replace5_1   text5_000   13,820.821 ns     36.0678 ns     31.9732 ns   13,820.524 ns   2.1362        -        -    10088 B 
+ StringReplace        replace2_1         replace5_1  text10_000    2,151.510 ns     15.0955 ns     14.1204 ns    2,145.651 ns   4.2725        -        -    20176 B 
+ RegexrReplace        replace2_1         replace5_1  text10_000   28,257.996 ns     79.9676 ns     66.7766 ns   28,252.390 ns   4.2725        -        -    20176 B 
+ StringReplace        replace2_1         replace5_1  text50_000   34,247.403 ns    223.3916 ns    198.0308 ns   34,267.151 ns  31.1890  31.1890  31.1890   100723 B 
+ RegexrReplace        replace2_1         replace5_1  text50_000  163,826.753 ns    292.7061 ns    259.4763 ns  163,812.610 ns  31.0059  31.0059  31.0059   100733 B 
+ StringReplace        replace2_1         replace8_1      text10       12.053 ns      0.0261 ns      0.0245 ns       12.053 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace8_1      text10       71.050 ns      0.0813 ns      0.0721 ns       71.069 ns        -        -        -          - 
+ StringReplace        replace2_1         replace8_1      text50       16.719 ns      0.0237 ns      0.0210 ns       16.717 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace8_1      text50      158.579 ns      0.5066 ns      0.4739 ns      158.586 ns        -        -        -          - 
+ StringReplace        replace2_1         replace8_1     text100       18.306 ns      0.0355 ns      0.0332 ns       18.316 ns        -        -        -          - 
+ RegexrReplace        replace2_1         replace8_1     text100      268.056 ns      0.4058 ns      0.3597 ns      268.160 ns        -        -        -          - 
+ StringReplace        replace2_1         replace8_1     text500      147.752 ns      0.5829 ns      0.5452 ns      147.919 ns   0.2227        -        -     1048 B 
+ RegexrReplace        replace2_1         replace8_1     text500    1,497.358 ns      2.2930 ns      2.1448 ns    1,497.636 ns   0.2213        -        -     1048 B 
+ StringReplace        replace2_1         replace8_1   text1_000      245.358 ns      2.8543 ns      2.6699 ns      245.922 ns   0.4368        -        -     2056 B 
+ RegexrReplace        replace2_1         replace8_1   text1_000    2,851.498 ns      3.3118 ns      3.0979 ns    2,851.336 ns   0.4349        -        -     2056 B 
+ StringReplace        replace2_1         replace8_1   text5_000    1,005.664 ns      4.1919 ns      3.7160 ns    1,005.516 ns   2.1496        -        -    10136 B 
+ RegexrReplace        replace2_1         replace8_1   text5_000   13,751.722 ns     16.7241 ns     13.9654 ns   13,754.097 ns   2.1362        -        -    10136 B 
+ StringReplace        replace2_1         replace8_1  text10_000    2,181.806 ns     14.8949 ns     13.9327 ns    2,184.935 ns   4.2915        -        -    20272 B 
+ RegexrReplace        replace2_1         replace8_1  text10_000   28,278.503 ns     67.2828 ns     59.6445 ns   28,260.405 ns   4.2725        -        -    20272 B 
+ StringReplace        replace2_1         replace8_1  text50_000   33,913.909 ns    380.2566 ns    355.6923 ns   33,998.810 ns  31.1890  31.1890  31.1890   101187 B 
+ RegexrReplace        replace2_1         replace8_1  text50_000  163,165.719 ns    319.0643 ns    298.4530 ns  163,179.419 ns  31.0059  31.0059  31.0059   101197 B 
+ StringReplace        replace2_1        replace13_1      text10       12.038 ns      0.0386 ns      0.0343 ns       12.051 ns        -        -        -          - 
+ RegexrReplace        replace2_1        replace13_1      text10       68.600 ns      0.2448 ns      0.2290 ns       68.698 ns        -        -        -          - 
+ StringReplace        replace2_1        replace13_1      text50       16.122 ns      0.0206 ns      0.0193 ns       16.122 ns        -        -        -          - 
+ RegexrReplace        replace2_1        replace13_1      text50      160.821 ns      0.2485 ns      0.2203 ns      160.869 ns        -        -        -          - 
+ StringReplace        replace2_1        replace13_1     text100       17.486 ns      0.0151 ns      0.0142 ns       17.485 ns        -        -        -          - 
+ RegexrReplace        replace2_1        replace13_1     text100      268.126 ns      0.1855 ns      0.1644 ns      268.068 ns        -        -        -          - 
+ StringReplace        replace2_1        replace13_1     text500      146.136 ns      1.1280 ns      1.0552 ns      146.543 ns   0.2260        -        -     1064 B 
+ RegexrReplace        replace2_1        replace13_1     text500    1,498.731 ns      2.4589 ns      2.3001 ns    1,499.387 ns   0.2251        -        -     1064 B 
+ StringReplace        replace2_1        replace13_1   text1_000      247.773 ns      2.0655 ns      1.9320 ns      247.299 ns   0.4435        -        -     2088 B 
+ RegexrReplace        replace2_1        replace13_1   text1_000    2,850.233 ns     12.1385 ns     10.7604 ns    2,846.981 ns   0.4425        -        -     2088 B 
+ StringReplace        replace2_1        replace13_1   text5_000    1,014.842 ns      2.3153 ns      2.0525 ns    1,014.350 ns   2.1725        -        -    10248 B 
+ RegexrReplace        replace2_1        replace13_1   text5_000   13,801.630 ns     25.2598 ns     23.6281 ns   13,797.014 ns   2.1667        -        -    10248 B 
+ StringReplace        replace2_1        replace13_1  text10_000    2,198.366 ns     10.9670 ns     10.2585 ns    2,201.720 ns   4.3449        -        -    20528 B 
+ RegexrReplace        replace2_1        replace13_1  text10_000   28,314.317 ns     65.8315 ns     54.9723 ns   28,303.415 ns   4.3335        -        -    20528 B 
+ StringReplace        replace2_1        replace13_1  text50_000   33,782.931 ns    664.5261 ns    816.0977 ns   34,020.926 ns  32.2266  32.2266  32.2266   102339 B 
+ RegexrReplace        replace2_1        replace13_1  text50_000  164,279.229 ns    214.6549 ns    190.2860 ns  164,283.899 ns  32.2266  32.2266  32.2266   102350 B 
+ StringReplace        replace2_1        replace21_1      text10       12.651 ns      0.0378 ns      0.0353 ns       12.645 ns        -        -        -          - 
+ RegexrReplace        replace2_1        replace21_1      text10       70.953 ns      0.1729 ns      0.1533 ns       70.994 ns        -        -        -          - 
+ StringReplace        replace2_1        replace21_1      text50       16.140 ns      0.0508 ns      0.0450 ns       16.145 ns        -        -        -          - 
+ RegexrReplace        replace2_1        replace21_1      text50      157.806 ns      0.9005 ns      0.8423 ns      157.695 ns        -        -        -          - 
+ StringReplace        replace2_1        replace21_1     text100       17.511 ns      0.0346 ns      0.0289 ns       17.512 ns        -        -        -          - 
+ RegexrReplace        replace2_1        replace21_1     text100      270.362 ns      0.4357 ns      0.3863 ns      270.395 ns        -        -        -          - 
+ StringReplace        replace2_1        replace21_1     text500      147.420 ns      1.0602 ns      0.9917 ns      147.704 ns   0.2329        -        -     1096 B 
+ RegexrReplace        replace2_1        replace21_1     text500    1,495.965 ns      3.4769 ns      2.9034 ns    1,496.231 ns   0.2327        -        -     1096 B 
+ StringReplace        replace2_1        replace21_1   text1_000      252.160 ns      2.3418 ns      2.0760 ns      251.624 ns   0.4535        -        -     2136 B 
+ RegexrReplace        replace2_1        replace21_1   text1_000    2,874.617 ns     12.2271 ns     11.4372 ns    2,878.422 ns   0.4501        -        -     2136 B 
+ StringReplace        replace2_1        replace21_1   text5_000    1,011.265 ns      8.0711 ns      7.5497 ns    1,007.855 ns   2.2106        -        -    10424 B 
+ RegexrReplace        replace2_1        replace21_1   text5_000   13,779.537 ns     18.6147 ns     15.5441 ns   13,779.272 ns   2.1973        -        -    10424 B 
+ StringReplace        replace2_1        replace21_1  text10_000    2,238.892 ns     15.9990 ns     14.9655 ns    2,231.004 ns   4.4212        -        -    20928 B 
+ RegexrReplace        replace2_1        replace21_1  text10_000   28,317.805 ns     56.9535 ns     53.2744 ns   28,310.632 ns   4.4250        -        -    20928 B 
+ StringReplace        replace2_1        replace21_1  text50_000   35,769.921 ns    139.2899 ns    130.2919 ns   35,775.775 ns  32.2266  32.2266  32.2266   104179 B 
+ RegexrReplace        replace2_1        replace21_1  text50_000  168,419.177 ns  3,244.6469 ns  3,186.6771 ns  170,381.726 ns  32.2266  32.2266  32.2266   104190 B 
+ StringReplace        replace3_1         replace1_1      text10       12.407 ns      0.0231 ns      0.0205 ns       12.404 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace1_1      text10       64.375 ns      0.1566 ns      0.1465 ns       64.426 ns        -        -        -          - 
+ StringReplace        replace3_1         replace1_1      text50       15.959 ns      0.0214 ns      0.0179 ns       15.959 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace1_1      text50      128.630 ns      0.2088 ns      0.1851 ns      128.584 ns        -        -        -          - 
+ StringReplace        replace3_1         replace1_1     text100       16.539 ns      0.0338 ns      0.0300 ns       16.545 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace1_1     text100      207.087 ns      0.2054 ns      0.1921 ns      207.149 ns        -        -        -          - 
+ StringReplace        replace3_1         replace1_1     text500      166.723 ns      1.6634 ns      1.5560 ns      166.433 ns   0.2158        -        -     1016 B 
+ RegexrReplace        replace3_1         replace1_1     text500    1,296.669 ns      4.8122 ns      4.5013 ns    1,296.212 ns   0.2155        -        -     1016 B 
+ StringReplace        replace3_1         replace1_1   text1_000      267.833 ns      3.1938 ns      2.9874 ns      269.253 ns   0.4263        -        -     2008 B 
+ RegexrReplace        replace3_1         replace1_1   text1_000    2,297.330 ns      3.1933 ns      2.8308 ns    2,297.976 ns   0.4234        -        -     2008 B 
+ StringReplace        replace3_1         replace1_1   text5_000    1,175.335 ns     18.8151 ns     17.5997 ns    1,178.102 ns   2.1133        -        -     9960 B 
+ RegexrReplace        replace3_1         replace1_1   text5_000   10,523.680 ns     15.9544 ns     14.9238 ns   10,522.404 ns   2.1057        -        -     9960 B 
+ StringReplace        replace3_1         replace1_1  text10_000    2,284.170 ns     30.7344 ns     28.7490 ns    2,291.273 ns   4.2191        -        -    19912 B 
+ RegexrReplace        replace3_1         replace1_1  text10_000   21,250.794 ns     26.8672 ns     20.9762 ns   21,248.625 ns   4.2114        -        -    19912 B 
+ StringReplace        replace3_1         replace1_1  text50_000   35,240.574 ns    137.6283 ns    128.7376 ns   35,296.036 ns  31.1890  31.1890  31.1890    99509 B 
+ RegexrReplace        replace3_1         replace1_1  text50_000  127,227.663 ns    193.8548 ns    171.8473 ns  127,192.664 ns  31.0059  31.0059  31.0059    99509 B 
+ StringReplace        replace3_1         replace2_1      text10       11.889 ns      0.0525 ns      0.0465 ns       11.882 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace2_1      text10       62.378 ns      0.1639 ns      0.1369 ns       62.404 ns        -        -        -          - 
+ StringReplace        replace3_1         replace2_1      text50       16.444 ns      0.0263 ns      0.0246 ns       16.450 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace2_1      text50      122.579 ns      0.3821 ns      0.2983 ns      122.510 ns        -        -        -          - 
+ StringReplace        replace3_1         replace2_1     text100       15.745 ns      0.0503 ns      0.0471 ns       15.757 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace2_1     text100      209.329 ns      0.3147 ns      0.2943 ns      209.392 ns        -        -        -          - 
+ StringReplace        replace3_1         replace2_1     text500      165.821 ns      0.4198 ns      0.3926 ns      165.843 ns   0.2158        -        -     1016 B 
+ RegexrReplace        replace3_1         replace2_1     text500    1,266.587 ns      2.8849 ns      2.4090 ns    1,266.341 ns   0.2155        -        -     1016 B 
+ StringReplace        replace3_1         replace2_1   text1_000      268.558 ns      2.5735 ns      2.4072 ns      267.667 ns   0.4282        -        -     2016 B 
+ RegexrReplace        replace3_1         replace2_1   text1_000    2,255.191 ns      3.3880 ns      3.0033 ns    2,254.954 ns   0.4272        -        -     2016 B 
+ StringReplace        replace3_1         replace2_1   text5_000    1,163.572 ns     17.9698 ns     16.8090 ns    1,165.377 ns   2.1172        -        -     9992 B 
+ RegexrReplace        replace3_1         replace2_1   text5_000   10,559.234 ns     15.4003 ns     13.6519 ns   10,556.178 ns   2.1057        -        -     9992 B 
+ StringReplace        replace3_1         replace2_1  text10_000    2,310.231 ns      8.0724 ns      7.1560 ns    2,312.264 ns   4.2191        -        -    19968 B 
+ RegexrReplace        replace3_1         replace2_1  text10_000   21,123.744 ns     16.1078 ns     13.4507 ns   21,124.503 ns   4.2114        -        -    19968 B 
+ StringReplace        replace3_1         replace2_1  text50_000   34,878.092 ns    170.2413 ns    150.9144 ns   34,894.211 ns  31.1890  31.1890  31.1890    99781 B 
+ RegexrReplace        replace3_1         replace2_1  text50_000  127,035.427 ns    607.0351 ns    538.1208 ns  127,164.392 ns  31.0059  31.0059  31.0059    99781 B 
+ StringReplace        replace3_1         replace3_1      text10       11.908 ns      0.0389 ns      0.0364 ns       11.918 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace3_1      text10       60.608 ns      0.1804 ns      0.1687 ns       60.652 ns        -        -        -          - 
+ StringReplace        replace3_1         replace3_1      text50       15.979 ns      0.0214 ns      0.0179 ns       15.977 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace3_1      text50      123.896 ns      0.2699 ns      0.2254 ns      123.937 ns        -        -        -          - 
+ StringReplace        replace3_1         replace3_1     text100       16.521 ns      0.0194 ns      0.0172 ns       16.522 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace3_1     text100      207.099 ns      0.1494 ns      0.1325 ns      207.119 ns        -        -        -          - 
+ StringReplace        replace3_1         replace3_1     text500      164.165 ns      1.1016 ns      1.0304 ns      164.278 ns   0.2174        -        -     1024 B 
+ RegexrReplace        replace3_1         replace3_1     text500    1,274.917 ns      2.4457 ns      2.1680 ns    1,275.149 ns   0.2174        -        -     1024 B 
+ StringReplace        replace3_1         replace3_1   text1_000      267.783 ns      2.3334 ns      2.1827 ns      268.738 ns   0.4301        -        -     2024 B 
+ RegexrReplace        replace3_1         replace3_1   text1_000    2,257.163 ns      4.2728 ns      3.9968 ns    2,255.359 ns   0.4272        -        -     2024 B 
+ StringReplace        replace3_1         replace3_1   text5_000    1,127.089 ns     12.9376 ns     12.1018 ns    1,129.965 ns   2.1267        -        -    10024 B 
+ RegexrReplace        replace3_1         replace3_1   text5_000   10,559.178 ns     30.0178 ns     26.6100 ns   10,553.501 ns   2.1210        -        -    10024 B 
+ StringReplace        replace3_1         replace3_1  text10_000    2,294.229 ns     10.1144 ns      8.9661 ns    2,294.749 ns   4.2343        -        -    20024 B 
+ RegexrReplace        replace3_1         replace3_1  text10_000   21,268.002 ns     31.1961 ns     29.1809 ns   21,264.874 ns   4.2114        -        -    20024 B 
+ StringReplace        replace3_1         replace3_1  text50_000   34,668.733 ns    650.0330 ns    576.2374 ns   34,811.151 ns  31.1890  31.1890  31.1890   100045 B 
+ RegexrReplace        replace3_1         replace3_1  text50_000  126,934.676 ns    278.4186 ns    260.4329 ns  126,997.192 ns  31.0059  31.0059  31.0059   100045 B 
+ StringReplace        replace3_1         replace5_1      text10       11.922 ns      0.0389 ns      0.0364 ns       11.935 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace5_1      text10       65.828 ns      0.1057 ns      0.0937 ns       65.837 ns        -        -        -          - 
+ StringReplace        replace3_1         replace5_1      text50       16.449 ns      0.0306 ns      0.0286 ns       16.457 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace5_1      text50      128.350 ns      0.0611 ns      0.0572 ns      128.350 ns        -        -        -          - 
+ StringReplace        replace3_1         replace5_1     text100       15.740 ns      0.0584 ns      0.0517 ns       15.748 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace5_1     text100      211.195 ns      0.3950 ns      0.3695 ns      211.281 ns        -        -        -          - 
+ StringReplace        replace3_1         replace5_1     text500      165.977 ns      1.4376 ns      1.3447 ns      166.279 ns   0.2210        -        -     1040 B 
+ RegexrReplace        replace3_1         replace5_1     text500    1,272.769 ns      4.8012 ns      4.4910 ns    1,273.917 ns   0.2193        -        -     1040 B 
+ StringReplace        replace3_1         replace5_1   text1_000      263.969 ns      2.8209 ns      2.6387 ns      263.284 ns   0.4334        -        -     2040 B 
+ RegexrReplace        replace3_1         replace5_1   text1_000    2,251.842 ns      2.6188 ns      2.3215 ns    2,251.291 ns   0.4311        -        -     2040 B 
+ StringReplace        replace3_1         replace5_1   text5_000    1,129.100 ns      4.4102 ns      3.6827 ns    1,127.220 ns   2.1400        -        -    10088 B 
+ RegexrReplace        replace3_1         replace5_1   text5_000   10,623.825 ns     28.7672 ns     26.9089 ns   10,634.204 ns   2.1362        -        -    10088 B 
+ StringReplace        replace3_1         replace5_1  text10_000    2,394.744 ns     12.4568 ns     11.6521 ns    2,396.597 ns   4.2725        -        -    20144 B 
+ RegexrReplace        replace3_1         replace5_1  text10_000   21,242.768 ns     26.4617 ns     22.0967 ns   21,241.620 ns   4.2725        -        -    20144 B 
+ StringReplace        replace3_1         replace5_1  text50_000   33,312.498 ns    266.0871 ns    222.1948 ns   33,190.607 ns  31.1890  31.1890  31.1890   100581 B 
+ RegexrReplace        replace3_1         replace5_1  text50_000  127,024.592 ns    273.9077 ns    242.8120 ns  127,043.262 ns  31.0059  31.0059  31.0059   100583 B 
+ StringReplace        replace3_1         replace8_1      text10       11.913 ns      0.0360 ns      0.0337 ns       11.922 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace8_1      text10       64.665 ns      0.1409 ns      0.1100 ns       64.649 ns        -        -        -          - 
+ StringReplace        replace3_1         replace8_1      text50       16.457 ns      0.0201 ns      0.0178 ns       16.459 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace8_1      text50      122.433 ns      0.5525 ns      0.4897 ns      122.314 ns        -        -        -          - 
+ StringReplace        replace3_1         replace8_1     text100       16.521 ns      0.0286 ns      0.0267 ns       16.520 ns        -        -        -          - 
+ RegexrReplace        replace3_1         replace8_1     text100      206.709 ns      0.4396 ns      0.3432 ns      206.757 ns        -        -        -          - 
+ StringReplace        replace3_1         replace8_1     text500      164.705 ns      0.5300 ns      0.4699 ns      164.716 ns   0.2227        -        -     1048 B 
+ RegexrReplace        replace3_1         replace8_1     text500    1,267.494 ns      2.1602 ns      2.0207 ns    1,267.108 ns   0.2213        -        -     1048 B 
+ StringReplace        replace3_1         replace8_1   text1_000      264.114 ns      2.9595 ns      2.7684 ns      263.156 ns   0.4368        -        -     2056 B 
+ RegexrReplace        replace3_1         replace8_1   text1_000    2,265.271 ns      3.4213 ns      3.0329 ns    2,264.239 ns   0.4349        -        -     2056 B 
+ StringReplace        replace3_1         replace8_1   text5_000    1,137.995 ns      7.6747 ns      7.1789 ns    1,134.803 ns   2.1534        -        -    10152 B 
+ RegexrReplace        replace3_1         replace8_1   text5_000   10,543.512 ns     18.2461 ns     16.1747 ns   10,546.280 ns   2.1515        -        -    10152 B 
+ StringReplace        replace3_1         replace8_1  text10_000    2,300.102 ns     15.4731 ns     12.9207 ns    2,299.102 ns   4.2915        -        -    20256 B 
+ RegexrReplace        replace3_1         replace8_1  text10_000   21,196.169 ns     24.7590 ns     23.1596 ns   21,201.855 ns   4.2725        -        -    20256 B 
+ StringReplace        replace3_1         replace8_1  text50_000   34,972.534 ns    154.1316 ns    144.1748 ns   35,013.806 ns  31.1890  31.1890  31.1890   101117 B 
+ RegexrReplace        replace3_1         replace8_1  text50_000  127,356.112 ns    313.4741 ns    244.7399 ns  127,333.350 ns  31.0059  31.0059  31.0059   101117 B 
+ StringReplace        replace3_1        replace13_1      text10       11.894 ns      0.0337 ns      0.0281 ns       11.895 ns        -        -        -          - 
+ RegexrReplace        replace3_1        replace13_1      text10       64.302 ns      1.0911 ns      1.0206 ns       64.843 ns        -        -        -          - 
+ StringReplace        replace3_1        replace13_1      text50       16.453 ns      0.0340 ns      0.0284 ns       16.460 ns        -        -        -          - 
+ RegexrReplace        replace3_1        replace13_1      text50      126.667 ns      0.1831 ns      0.1623 ns      126.680 ns        -        -        -          - 
+ StringReplace        replace3_1        replace13_1     text100       16.172 ns      0.0308 ns      0.0288 ns       16.179 ns        -        -        -          - 
+ RegexrReplace        replace3_1        replace13_1     text100      207.812 ns      0.1252 ns      0.1046 ns      207.861 ns        -        -        -          - 
+ StringReplace        replace3_1        replace13_1     text500      168.543 ns      1.2332 ns      1.0932 ns      168.013 ns   0.2294        -        -     1080 B 
+ RegexrReplace        replace3_1        replace13_1     text500    1,272.551 ns      2.6953 ns      2.3893 ns    1,273.149 ns   0.2289        -        -     1080 B 
+ StringReplace        replace3_1        replace13_1   text1_000      317.501 ns      2.3902 ns      1.9959 ns      316.922 ns   0.4454        -        -     2096 B 
+ RegexrReplace        replace3_1        replace13_1   text1_000    2,286.066 ns      7.2721 ns      6.4466 ns    2,287.492 ns   0.4425        -        -     2096 B 
+ StringReplace        replace3_1        replace13_1   text5_000    1,157.882 ns     18.6722 ns     17.4660 ns    1,150.088 ns   2.1877        -        -    10312 B 
+ RegexrReplace        replace3_1        replace13_1   text5_000   10,602.418 ns     35.5920 ns     33.2928 ns   10,604.454 ns   2.1820        -        -    10312 B 
+ StringReplace        replace3_1        replace13_1  text10_000    2,369.333 ns      3.1425 ns      2.7857 ns    2,369.155 ns   4.3449        -        -    20544 B 
+ RegexrReplace        replace3_1        replace13_1  text10_000   21,265.852 ns     32.0419 ns     25.0162 ns   21,261.475 ns   4.3335        -        -    20544 B 
+ StringReplace        replace3_1        replace13_1  text50_000   35,946.180 ns    126.2301 ns    118.0757 ns   35,974.310 ns  32.2266  32.2266  32.2266   102462 B 
+ RegexrReplace        replace3_1        replace13_1  text50_000  133,072.520 ns  2,144.7198 ns  1,674.4561 ns  132,621.008 ns  32.2266  32.2266  32.2266   102462 B 
+ StringReplace        replace3_1        replace21_1      text10       12.427 ns      0.0218 ns      0.0204 ns       12.424 ns        -        -        -          - 
+ RegexrReplace        replace3_1        replace21_1      text10       62.282 ns      0.1076 ns      0.0840 ns       62.306 ns        -        -        -          - 
+ StringReplace        replace3_1        replace21_1      text50       16.473 ns      0.0213 ns      0.0189 ns       16.472 ns        -        -        -          - 
+ RegexrReplace        replace3_1        replace21_1      text50      125.481 ns      0.1392 ns      0.1302 ns      125.501 ns        -        -        -          - 
+ StringReplace        replace3_1        replace21_1     text100       16.834 ns      0.0296 ns      0.0277 ns       16.833 ns        -        -        -          - 
+ RegexrReplace        replace3_1        replace21_1     text100      205.746 ns      0.1817 ns      0.1517 ns      205.753 ns        -        -        -          - 
+ StringReplace        replace3_1        replace21_1     text500      168.231 ns      1.3557 ns      1.2681 ns      168.580 ns   0.2396        -        -     1128 B 
+ RegexrReplace        replace3_1        replace21_1     text500    1,274.786 ns      1.9941 ns      1.6652 ns    1,275.187 ns   0.2384        -        -     1128 B 
+ StringReplace        replace3_1        replace21_1   text1_000      273.498 ns      2.3955 ns      2.2408 ns      273.807 ns   0.4587        -        -     2160 B 
+ RegexrReplace        replace3_1        replace21_1   text1_000    2,260.481 ns      3.1778 ns      2.9725 ns    2,260.899 ns   0.4578        -        -     2160 B 
+ StringReplace        replace3_1        replace21_1   text5_000    1,159.288 ns      8.7306 ns      8.1666 ns    1,156.806 ns   2.2411        -        -    10568 B 
+ RegexrReplace        replace3_1        replace21_1   text5_000   10,607.011 ns     20.4039 ns     17.0382 ns   10,608.028 ns   2.2278        -        -    10568 B 
+ StringReplace        replace3_1        replace21_1  text10_000    2,364.197 ns     19.6464 ns     18.3772 ns    2,368.478 ns   4.4441        -        -    21008 B 
+ RegexrReplace        replace3_1        replace21_1  text10_000   21,278.368 ns     19.5558 ns     16.3300 ns   21,283.124 ns   4.4250        -        -    21008 B 
+ StringReplace        replace3_1        replace21_1  text50_000   36,894.781 ns    163.7242 ns    153.1477 ns   36,902.454 ns  32.2266  32.2266  32.2266   104606 B 
+ RegexrReplace        replace3_1        replace21_1  text50_000  130,797.139 ns    799.7612 ns    748.0971 ns  130,509.912 ns  32.2266  32.2266  32.2266   104606 B 
+ StringReplace        replace5_1         replace1_1      text10       11.483 ns      0.0323 ns      0.0302 ns       11.480 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace1_1      text10       60.697 ns      0.0658 ns      0.0616 ns       60.709 ns        -        -        -          - 
+ StringReplace        replace5_1         replace1_1      text50       16.249 ns      0.0229 ns      0.0214 ns       16.253 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace1_1      text50       95.994 ns      0.1675 ns      0.1399 ns       95.944 ns        -        -        -          - 
+ StringReplace        replace5_1         replace1_1     text100       18.610 ns      0.0294 ns      0.0261 ns       18.615 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace1_1     text100      145.565 ns      0.2007 ns      0.1676 ns      145.586 ns        -        -        -          - 
+ StringReplace        replace5_1         replace1_1     text500      145.291 ns      0.9928 ns      0.9287 ns      145.507 ns   0.2141        -        -     1008 B 
+ RegexrReplace        replace5_1         replace1_1     text500      873.695 ns      2.2363 ns      2.0918 ns      873.897 ns   0.2136        -        -     1008 B 
+ StringReplace        replace5_1         replace1_1   text1_000      227.414 ns      1.2003 ns      1.1228 ns      227.240 ns   0.4265        -        -     2008 B 
+ RegexrReplace        replace5_1         replace1_1   text1_000    1,459.165 ns      3.1856 ns      2.9798 ns    1,459.769 ns   0.4253        -        -     2008 B 
+ StringReplace        replace5_1         replace1_1   text5_000    1,027.495 ns      7.4002 ns      6.5601 ns    1,028.083 ns   2.1095        -        -     9944 B 
+ RegexrReplace        replace5_1         replace1_1   text5_000    6,825.231 ns     20.5195 ns     19.1939 ns    6,822.021 ns   2.1057        -        -     9944 B 
+ StringReplace        replace5_1         replace1_1  text10_000    2,078.983 ns     10.4718 ns      8.1757 ns    2,081.505 ns   4.2000        -        -    19872 B 
+ RegexrReplace        replace5_1         replace1_1  text10_000   14,094.576 ns     29.4288 ns     24.5744 ns   14,088.387 ns   4.1962        -        -    19872 B 
+ StringReplace        replace5_1         replace1_1  text50_000   33,528.178 ns    137.3075 ns    128.4375 ns   33,506.177 ns  31.1890  31.1890  31.1890    99267 B 
+ RegexrReplace        replace5_1         replace1_1  text50_000   91,249.411 ns    218.4919 ns    193.6874 ns   91,279.419 ns  31.1279  31.1279  31.1279    99277 B 
+ StringReplace        replace5_1         replace2_1      text10       11.484 ns      0.0243 ns      0.0215 ns       11.480 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace2_1      text10       58.645 ns      0.1206 ns      0.0941 ns       58.668 ns        -        -        -          - 
+ StringReplace        replace5_1         replace2_1      text50       15.430 ns      0.0338 ns      0.0300 ns       15.420 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace2_1      text50       96.168 ns      0.1765 ns      0.1651 ns       96.235 ns        -        -        -          - 
+ StringReplace        replace5_1         replace2_1     text100       17.274 ns      0.0171 ns      0.0160 ns       17.274 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace2_1     text100      145.593 ns      0.1813 ns      0.1607 ns      145.529 ns        -        -        -          - 
+ StringReplace        replace5_1         replace2_1     text500      145.868 ns      1.2844 ns      1.2014 ns      146.062 ns   0.2158        -        -     1016 B 
+ RegexrReplace        replace5_1         replace2_1     text500      857.733 ns      1.2053 ns      1.1275 ns      857.890 ns   0.2155        -        -     1016 B 
+ StringReplace        replace5_1         replace2_1   text1_000      227.552 ns      2.2236 ns      2.0800 ns      227.366 ns   0.4284        -        -     2016 B 
+ RegexrReplace        replace5_1         replace2_1   text1_000    1,439.395 ns      3.1295 ns      2.9274 ns    1,439.218 ns   0.4272        -        -     2016 B 
+ StringReplace        replace5_1         replace2_1   text5_000    1,025.906 ns      6.5381 ns      5.7959 ns    1,025.276 ns   2.1133        -        -     9968 B 
+ RegexrReplace        replace5_1         replace2_1   text5_000    6,806.944 ns      9.1473 ns      8.1089 ns    6,806.334 ns   2.1133        -        -     9968 B 
+ StringReplace        replace5_1         replace2_1  text10_000    2,093.984 ns     20.0687 ns     18.7723 ns    2,086.794 ns   4.2191        -        -    19912 B 
+ RegexrReplace        replace5_1         replace2_1  text10_000   14,037.076 ns     38.0584 ns     33.7378 ns   14,050.886 ns   4.2114        -        -    19912 B 
+ StringReplace        replace5_1         replace2_1  text50_000   33,299.601 ns    112.9112 ns    105.6172 ns   33,313.025 ns  31.1890  31.1890  31.1890    99459 B 
+ RegexrReplace        replace5_1         replace2_1  text50_000   91,367.196 ns    600.7852 ns    561.9749 ns   91,469.324 ns  31.1279  31.1279  31.1279    99469 B 
+ StringReplace        replace5_1         replace3_1      text10       12.164 ns      0.0271 ns      0.0253 ns       12.167 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace3_1      text10       59.189 ns      0.3970 ns      0.3713 ns       58.897 ns        -        -        -          - 
+ StringReplace        replace5_1         replace3_1      text50       16.251 ns      0.0156 ns      0.0122 ns       16.252 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace3_1      text50       94.252 ns      0.1827 ns      0.1709 ns       94.276 ns        -        -        -          - 
+ StringReplace        replace5_1         replace3_1     text100       18.620 ns      0.0420 ns      0.0393 ns       18.618 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace3_1     text100      143.910 ns      0.1615 ns      0.1432 ns      143.893 ns        -        -        -          - 
+ StringReplace        replace5_1         replace3_1     text500      146.427 ns      0.7686 ns      0.7190 ns      146.565 ns   0.2158        -        -     1016 B 
+ RegexrReplace        replace5_1         replace3_1     text500      873.941 ns      2.2484 ns      1.9932 ns      873.826 ns   0.2155        -        -     1016 B 
+ StringReplace        replace5_1         replace3_1   text1_000      230.792 ns      1.0589 ns      0.9905 ns      230.694 ns   0.4284        -        -     2016 B 
+ RegexrReplace        replace5_1         replace3_1   text1_000    1,447.566 ns      3.0083 ns      2.8140 ns    1,448.176 ns   0.4272        -        -     2016 B 
+ StringReplace        replace5_1         replace3_1   text5_000    1,021.786 ns      4.5588 ns      4.0413 ns    1,020.671 ns   2.1172        -        -     9984 B 
+ RegexrReplace        replace5_1         replace3_1   text5_000    6,882.913 ns      8.3209 ns      7.3762 ns    6,883.216 ns   2.1133        -        -     9984 B 
+ StringReplace        replace5_1         replace3_1  text10_000    2,086.948 ns     15.3526 ns     14.3608 ns    2,086.780 ns   4.2191        -        -    19952 B 
+ RegexrReplace        replace5_1         replace3_1  text10_000   13,936.977 ns     21.5317 ns     17.9800 ns   13,931.734 ns   4.2114        -        -    19952 B 
+ StringReplace        replace5_1         replace3_1  text50_000   33,002.968 ns    126.8996 ns    112.4932 ns   33,007.852 ns  31.1890  31.1890  31.1890    99651 B 
+ RegexrReplace        replace5_1         replace3_1  text50_000   91,497.208 ns    252.3927 ns    210.7593 ns   91,521.790 ns  31.1279  31.1279  31.1279    99661 B 
+ StringReplace        replace5_1         replace5_1      text10       11.486 ns      0.0379 ns      0.0355 ns       11.468 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace5_1      text10       57.962 ns      0.3825 ns      0.3578 ns       57.740 ns        -        -        -          - 
+ StringReplace        replace5_1         replace5_1      text50       15.413 ns      0.0414 ns      0.0367 ns       15.418 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace5_1      text50       92.042 ns      0.9993 ns      0.9348 ns       91.600 ns        -        -        -          - 
+ StringReplace        replace5_1         replace5_1     text100       17.278 ns      0.0341 ns      0.0285 ns       17.269 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace5_1     text100      147.092 ns      0.1863 ns      0.1556 ns      147.107 ns        -        -        -          - 
+ StringReplace        replace5_1         replace5_1     text500      145.529 ns      0.6984 ns      0.6533 ns      145.792 ns   0.2174        -        -     1024 B 
+ RegexrReplace        replace5_1         replace5_1     text500      872.822 ns      2.2383 ns      1.8691 ns      873.359 ns   0.2174        -        -     1024 B 
+ StringReplace        replace5_1         replace5_1   text1_000      250.027 ns      4.9170 ns      5.0494 ns      251.710 ns   0.4301        -        -     2024 B 
+ RegexrReplace        replace5_1         replace5_1   text1_000    1,440.237 ns      6.4478 ns      5.7158 ns    1,438.468 ns   0.4292        -        -     2024 B 
+ StringReplace        replace5_1         replace5_1   text5_000    1,025.991 ns      6.2563 ns      5.5460 ns    1,024.445 ns   2.1267        -        -    10024 B 
+ RegexrReplace        replace5_1         replace5_1   text5_000    6,844.802 ns     15.2222 ns     14.2389 ns    6,845.145 ns   2.1210        -        -    10024 B 
+ StringReplace        replace5_1         replace5_1  text10_000    2,115.979 ns     19.2812 ns     18.0356 ns    2,111.253 ns   4.2343        -        -    20024 B 
+ RegexrReplace        replace5_1         replace5_1  text10_000   13,917.241 ns     27.0545 ns     25.3068 ns   13,915.439 ns   4.2267        -        -    20024 B 
+ StringReplace        replace5_1         replace5_1  text50_000   33,827.207 ns    135.0490 ns    126.3249 ns   33,788.275 ns  31.1890  31.1890  31.1890   100035 B 
+ RegexrReplace        replace5_1         replace5_1  text50_000   94,859.613 ns    363.3378 ns    322.0895 ns   94,735.107 ns  31.1279  31.1279  31.1279   100045 B 
+ StringReplace        replace5_1         replace8_1      text10       12.169 ns      0.0178 ns      0.0166 ns       12.171 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace8_1      text10       60.809 ns      0.1491 ns      0.1322 ns       60.841 ns        -        -        -          - 
+ StringReplace        replace5_1         replace8_1      text50       15.401 ns      0.0482 ns      0.0376 ns       15.408 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace8_1      text50       92.320 ns      0.0954 ns      0.0745 ns       92.333 ns        -        -        -          - 
+ StringReplace        replace5_1         replace8_1     text100       18.606 ns      0.0564 ns      0.0528 ns       18.601 ns        -        -        -          - 
+ RegexrReplace        replace5_1         replace8_1     text100      143.280 ns      0.2427 ns      0.2027 ns      143.328 ns        -        -        -          - 
+ StringReplace        replace5_1         replace8_1     text500      147.288 ns      1.0830 ns      1.0130 ns      147.374 ns   0.2193        -        -     1032 B 
+ RegexrReplace        replace5_1         replace8_1     text500      865.256 ns      1.8519 ns      1.7322 ns      865.063 ns   0.2193        -        -     1032 B 
+ StringReplace        replace5_1         replace8_1   text1_000      229.334 ns      1.8039 ns      1.5991 ns      229.617 ns   0.4318        -        -     2032 B 
+ RegexrReplace        replace5_1         replace8_1   text1_000    1,438.225 ns      3.9121 ns      3.6594 ns    1,438.412 ns   0.4311        -        -     2032 B 
+ StringReplace        replace5_1         replace8_1   text5_000    1,138.469 ns      6.0991 ns      5.7051 ns    1,135.390 ns   2.1362        -        -    10064 B 
+ RegexrReplace        replace5_1         replace8_1   text5_000    7,043.470 ns      9.4753 ns      8.8632 ns    7,042.004 ns   2.1362        -        -    10064 B 
+ StringReplace        replace5_1         replace8_1  text10_000    2,116.242 ns     16.4623 ns     15.3988 ns    2,121.012 ns   4.2534        -        -    20104 B 
+ RegexrReplace        replace5_1         replace8_1  text10_000   13,945.505 ns     17.3910 ns     14.5223 ns   13,948.900 ns   4.2419        -        -    20104 B 
+ StringReplace        replace5_1         replace8_1  text50_000   33,515.169 ns    164.1516 ns    153.5475 ns   33,531.470 ns  31.1890  31.1890  31.1890   100419 B 
+ RegexrReplace        replace5_1         replace8_1  text50_000   92,280.490 ns    272.8657 ns    227.8553 ns   92,335.303 ns  31.1279  31.1279  31.1279   100429 B 
+ StringReplace        replace5_1        replace13_1      text10       11.476 ns      0.0389 ns      0.0364 ns       11.465 ns        -        -        -          - 
+ RegexrReplace        replace5_1        replace13_1      text10       59.400 ns      0.3183 ns      0.2977 ns       59.494 ns        -        -        -          - 
+ StringReplace        replace5_1        replace13_1      text50       16.246 ns      0.0256 ns      0.0227 ns       16.250 ns        -        -        -          - 
+ RegexrReplace        replace5_1        replace13_1      text50      101.401 ns      0.0934 ns      0.0780 ns      101.424 ns        -        -        -          - 
+ StringReplace        replace5_1        replace13_1     text100       17.656 ns      0.0288 ns      0.0240 ns       17.665 ns        -        -        -          - 
+ RegexrReplace        replace5_1        replace13_1     text100      142.316 ns      0.0970 ns      0.0859 ns      142.298 ns        -        -        -          - 
+ StringReplace        replace5_1        replace13_1     text500      147.138 ns      1.5970 ns      1.4938 ns      146.362 ns   0.2244        -        -     1056 B 
+ RegexrReplace        replace5_1        replace13_1     text500      862.251 ns      1.5614 ns      1.3842 ns      862.486 ns   0.2241        -        -     1056 B 
+ StringReplace        replace5_1        replace13_1   text1_000      230.414 ns      1.9566 ns      1.8302 ns      230.502 ns   0.4368        -        -     2056 B 
+ RegexrReplace        replace5_1        replace13_1   text1_000    1,473.596 ns      3.2376 ns      2.8700 ns    1,473.457 ns   0.4368        -        -     2056 B 
+ StringReplace        replace5_1        replace13_1   text5_000    1,033.075 ns      4.3289 ns      3.8375 ns    1,033.561 ns   2.1591        -        -    10168 B 
+ RegexrReplace        replace5_1        replace13_1   text5_000    6,824.679 ns     20.4232 ns     19.1038 ns    6,816.989 ns   2.1591        -        -    10168 B 
+ StringReplace        replace5_1        replace13_1  text10_000    2,127.208 ns      9.9620 ns      8.8311 ns    2,127.508 ns   4.2915        -        -    20288 B 
+ RegexrReplace        replace5_1        replace13_1  text10_000   14,425.681 ns     31.4861 ns     29.4521 ns   14,436.687 ns   4.2877        -        -    20288 B 
+ StringReplace        replace5_1        replace13_1  text50_000   33,767.045 ns    127.3522 ns    119.1253 ns   33,738.934 ns  31.1890  31.1890  31.1890   101379 B 
+ RegexrReplace        replace5_1        replace13_1  text50_000   92,335.437 ns    225.7330 ns    200.1064 ns   92,392.419 ns  31.1279  31.1279  31.1279   101389 B 
+ StringReplace        replace5_1        replace21_1      text10       12.163 ns      0.0286 ns      0.0267 ns       12.160 ns        -        -        -          - 
+ RegexrReplace        replace5_1        replace21_1      text10       57.311 ns      0.2244 ns      0.1989 ns       57.390 ns        -        -        -          - 
+ StringReplace        replace5_1        replace21_1      text50       16.235 ns      0.0166 ns      0.0156 ns       16.237 ns        -        -        -          - 
+ RegexrReplace        replace5_1        replace21_1      text50       95.649 ns      0.0648 ns      0.0606 ns       95.657 ns        -        -        -          - 
+ StringReplace        replace5_1        replace21_1     text100       17.661 ns      0.0129 ns      0.0115 ns       17.665 ns        -        -        -          - 
+ RegexrReplace        replace5_1        replace21_1     text100      142.710 ns      0.3284 ns      0.2742 ns      142.788 ns        -        -        -          - 
+ StringReplace        replace5_1        replace21_1     text500      149.263 ns      1.1663 ns      1.0909 ns      149.232 ns   0.2310        -        -     1088 B 
+ RegexrReplace        replace5_1        replace21_1     text500      868.389 ns      2.6268 ns      2.1935 ns      868.705 ns   0.2308        -        -     1088 B 
+ StringReplace        replace5_1        replace21_1   text1_000      233.112 ns      0.8469 ns      0.7508 ns      233.208 ns   0.4435        -        -     2088 B 
+ RegexrReplace        replace5_1        replace21_1   text1_000    1,440.174 ns      7.7942 ns      6.9094 ns    1,435.956 ns   0.4425        -        -     2088 B 
+ StringReplace        replace5_1        replace21_1   text5_000    1,045.931 ns      8.2518 ns      7.7187 ns    1,045.121 ns   2.1915        -        -    10328 B 
+ RegexrReplace        replace5_1        replace21_1   text5_000    6,858.543 ns     17.5417 ns     16.4085 ns    6,852.517 ns   2.1896        -        -    10328 B 
+ StringReplace        replace5_1        replace21_1  text10_000    2,436.780 ns     23.0180 ns     21.5310 ns    2,440.113 ns   4.3640        -        -    20592 B 
+ RegexrReplace        replace5_1        replace21_1  text10_000   14,025.741 ns     16.4975 ns     13.7762 ns   14,022.220 ns   4.3640        -        -    20592 B 
+ StringReplace        replace5_1        replace21_1  text50_000   34,790.079 ns    179.4012 ns    167.8120 ns   34,844.043 ns  32.2266  32.2266  32.2266   102915 B 
+ RegexrReplace        replace5_1        replace21_1  text50_000   93,736.210 ns    237.3084 ns    198.1633 ns   93,777.417 ns  32.2266  32.2266  32.2266   102926 B 
+ StringReplace        replace8_1         replace1_1      text10       11.284 ns      0.0419 ns      0.0392 ns       11.294 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace1_1      text10       53.673 ns      0.1925 ns      0.1707 ns       53.591 ns        -        -        -          - 
+ StringReplace        replace8_1         replace1_1      text50       14.998 ns      0.0112 ns      0.0099 ns       15.000 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace1_1      text50       94.140 ns      0.2121 ns      0.1984 ns       94.178 ns        -        -        -          - 
+ StringReplace        replace8_1         replace1_1     text100       18.353 ns      0.0304 ns      0.0270 ns       18.353 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace1_1     text100      134.370 ns      0.1296 ns      0.1212 ns      134.402 ns        -        -        -          - 
+ StringReplace        replace8_1         replace1_1     text500       30.664 ns      0.0717 ns      0.0636 ns       30.664 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace1_1     text500      457.766 ns      0.8763 ns      0.7768 ns      457.692 ns        -        -        -          - 
+ StringReplace        replace8_1         replace1_1   text1_000       67.894 ns      0.1262 ns      0.1053 ns       67.923 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace1_1   text1_000      849.065 ns      0.5352 ns      0.4744 ns      848.960 ns        -        -        -          - 
+ StringReplace        replace8_1         replace1_1   text5_000      260.404 ns      0.3415 ns      0.2851 ns      260.472 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace1_1   text5_000    4,111.714 ns      8.7271 ns      7.7364 ns    4,113.519 ns        -        -        -          - 
+ StringReplace        replace8_1         replace1_1  text10_000      510.886 ns      0.5177 ns      0.4590 ns      511.003 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace1_1  text10_000    8,458.173 ns     48.8582 ns     45.7020 ns    8,428.670 ns        -        -        -          - 
+ StringReplace        replace8_1         replace1_1  text50_000    2,924.496 ns      8.3243 ns      7.7866 ns    2,924.885 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace1_1  text50_000   41,599.483 ns     71.3855 ns     66.7740 ns   41,614.252 ns        -        -        -          - 
+ StringReplace        replace8_1         replace2_1      text10       11.486 ns      0.0217 ns      0.0203 ns       11.480 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace2_1      text10       59.601 ns      0.0606 ns      0.0473 ns       59.607 ns        -        -        -          - 
+ StringReplace        replace8_1         replace2_1      text50       15.750 ns      0.0148 ns      0.0124 ns       15.753 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace2_1      text50       94.140 ns      0.3701 ns      0.3281 ns       94.031 ns        -        -        -          - 
+ StringReplace        replace8_1         replace2_1     text100       17.181 ns      0.0290 ns      0.0271 ns       17.195 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace2_1     text100      134.004 ns      0.2990 ns      0.2651 ns      134.076 ns        -        -        -          - 
+ StringReplace        replace8_1         replace2_1     text500       31.227 ns      0.0513 ns      0.0454 ns       31.236 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace2_1     text500      453.499 ns      0.4028 ns      0.3768 ns      453.526 ns        -        -        -          - 
+ StringReplace        replace8_1         replace2_1   text1_000       67.884 ns      0.0702 ns      0.0622 ns       67.886 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace2_1   text1_000      851.084 ns      1.8644 ns      1.7440 ns      850.779 ns        -        -        -          - 
+ StringReplace        replace8_1         replace2_1   text5_000      255.136 ns      0.7104 ns      0.6297 ns      255.241 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace2_1   text5_000    4,101.305 ns      7.7010 ns      7.2035 ns    4,101.735 ns        -        -        -          - 
+ StringReplace        replace8_1         replace2_1  text10_000      519.424 ns      1.9723 ns      1.7484 ns      519.647 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace2_1  text10_000    8,386.526 ns      7.7196 ns      7.2210 ns    8,385.083 ns        -        -        -          - 
+ StringReplace        replace8_1         replace2_1  text50_000    2,923.277 ns      8.7334 ns      7.2928 ns    2,923.380 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace2_1  text50_000   42,105.420 ns     46.5392 ns     41.2558 ns   42,110.199 ns        -        -        -          - 
+ StringReplace        replace8_1         replace3_1      text10       11.309 ns      0.0390 ns      0.0365 ns       11.302 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace3_1      text10       58.699 ns      0.1188 ns      0.0927 ns       58.673 ns        -        -        -          - 
+ StringReplace        replace8_1         replace3_1      text50       15.017 ns      0.0509 ns      0.0452 ns       14.999 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace3_1      text50      102.883 ns      0.3595 ns      0.3187 ns      102.939 ns        -        -        -          - 
+ StringReplace        replace8_1         replace3_1     text100       17.173 ns      0.0264 ns      0.0234 ns       17.167 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace3_1     text100      133.388 ns      0.2083 ns      0.1740 ns      133.366 ns        -        -        -          - 
+ StringReplace        replace8_1         replace3_1     text500       30.670 ns      0.0769 ns      0.0642 ns       30.677 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace3_1     text500      456.070 ns      0.1626 ns      0.1358 ns      456.107 ns        -        -        -          - 
+ StringReplace        replace8_1         replace3_1   text1_000       67.917 ns      0.0798 ns      0.0746 ns       67.932 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace3_1   text1_000      849.838 ns      1.0676 ns      0.9464 ns      850.113 ns        -        -        -          - 
+ StringReplace        replace8_1         replace3_1   text5_000      253.043 ns      0.9947 ns      0.8818 ns      253.233 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace3_1   text5_000    4,120.235 ns     12.6360 ns     11.2015 ns    4,120.480 ns        -        -        -          - 
+ StringReplace        replace8_1         replace3_1  text10_000      509.671 ns      0.5953 ns      0.5569 ns      509.862 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace3_1  text10_000    8,396.253 ns      9.3209 ns      8.7188 ns    8,396.944 ns        -        -        -          - 
+ StringReplace        replace8_1         replace3_1  text50_000    2,925.351 ns     19.9683 ns     18.6784 ns    2,927.518 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace3_1  text50_000   42,168.634 ns     63.8585 ns     59.7332 ns   42,192.212 ns        -        -        -          - 
+ StringReplace        replace8_1         replace5_1      text10       11.476 ns      0.0198 ns      0.0175 ns       11.475 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace5_1      text10       55.701 ns      0.0554 ns      0.0463 ns       55.717 ns        -        -        -          - 
+ StringReplace        replace8_1         replace5_1      text50       14.982 ns      0.0291 ns      0.0272 ns       14.994 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace5_1      text50       96.601 ns      0.1170 ns      0.1037 ns       96.597 ns        -        -        -          - 
+ StringReplace        replace8_1         replace5_1     text100       18.335 ns      0.0336 ns      0.0314 ns       18.339 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace5_1     text100      134.495 ns      0.1755 ns      0.1642 ns      134.474 ns        -        -        -          - 
+ StringReplace        replace8_1         replace5_1     text500       31.218 ns      0.0532 ns      0.0444 ns       31.202 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace5_1     text500      455.719 ns      1.1436 ns      1.0138 ns      455.739 ns        -        -        -          - 
+ StringReplace        replace8_1         replace5_1   text1_000       68.920 ns      0.0943 ns      0.0882 ns       68.939 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace5_1   text1_000      849.584 ns      1.1501 ns      0.9604 ns      849.386 ns        -        -        -          - 
+ StringReplace        replace8_1         replace5_1   text5_000      253.843 ns      0.6440 ns      0.5709 ns      253.874 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace5_1   text5_000    4,103.436 ns      4.6188 ns      4.3204 ns    4,103.859 ns        -        -        -          - 
+ StringReplace        replace8_1         replace5_1  text10_000      509.728 ns      0.6798 ns      0.6359 ns      509.690 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace5_1  text10_000    8,395.151 ns     26.4946 ns     23.4868 ns    8,399.593 ns        -        -        -          - 
+ StringReplace        replace8_1         replace5_1  text50_000    2,920.841 ns     14.9171 ns     13.9535 ns    2,925.154 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace5_1  text50_000   41,754.832 ns     57.5079 ns     53.7929 ns   41,757.782 ns        -        -        -          - 
+ StringReplace        replace8_1         replace8_1      text10       11.296 ns      0.0579 ns      0.0541 ns       11.303 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace8_1      text10       56.518 ns      0.5471 ns      0.5117 ns       56.701 ns        -        -        -          - 
+ StringReplace        replace8_1         replace8_1      text50       14.992 ns      0.0141 ns      0.0125 ns       14.993 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace8_1      text50       99.335 ns      0.3477 ns      0.3252 ns       99.413 ns        -        -        -          - 
+ StringReplace        replace8_1         replace8_1     text100       18.360 ns      0.0402 ns      0.0356 ns       18.359 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace8_1     text100      132.802 ns      0.9337 ns      0.8734 ns      132.361 ns        -        -        -          - 
+ StringReplace        replace8_1         replace8_1     text500       30.759 ns      0.0450 ns      0.0421 ns       30.766 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace8_1     text500      452.300 ns      0.5725 ns      0.5075 ns      452.448 ns        -        -        -          - 
+ StringReplace        replace8_1         replace8_1   text1_000       65.159 ns      0.1603 ns      0.1338 ns       65.153 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace8_1   text1_000      850.324 ns      1.4825 ns      1.3868 ns      850.587 ns        -        -        -          - 
+ StringReplace        replace8_1         replace8_1   text5_000      253.109 ns      0.4078 ns      0.3815 ns      253.200 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace8_1   text5_000    4,117.998 ns      4.8418 ns      4.0431 ns    4,119.070 ns        -        -        -          - 
+ StringReplace        replace8_1         replace8_1  text10_000      513.539 ns      1.9530 ns      1.8269 ns      512.649 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace8_1  text10_000    8,390.239 ns      9.5802 ns      8.4926 ns    8,388.506 ns        -        -        -          - 
+ StringReplace        replace8_1         replace8_1  text50_000    3,148.861 ns     33.1768 ns     31.0336 ns    3,158.207 ns        -        -        -          - 
+ RegexrReplace        replace8_1         replace8_1  text50_000   42,190.143 ns     44.2336 ns     36.9371 ns   42,195.685 ns        -        -        -          - 
+ StringReplace        replace8_1        replace13_1      text10       11.293 ns      0.0346 ns      0.0323 ns       11.299 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace13_1      text10       53.980 ns      0.1043 ns      0.0871 ns       54.009 ns        -        -        -          - 
+ StringReplace        replace8_1        replace13_1      text50       14.979 ns      0.0205 ns      0.0192 ns       14.980 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace13_1      text50       95.960 ns      0.0822 ns      0.0686 ns       95.982 ns        -        -        -          - 
+ StringReplace        replace8_1        replace13_1     text100       18.286 ns      0.0218 ns      0.0193 ns       18.283 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace13_1     text100      139.185 ns      0.1556 ns      0.1455 ns      139.185 ns        -        -        -          - 
+ StringReplace        replace8_1        replace13_1     text500       31.562 ns      0.1663 ns      0.1556 ns       31.494 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace13_1     text500      456.743 ns      0.7905 ns      0.6601 ns      456.649 ns        -        -        -          - 
+ StringReplace        replace8_1        replace13_1   text1_000       67.201 ns      0.0525 ns      0.0491 ns       67.217 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace13_1   text1_000      848.379 ns      0.9842 ns      0.7684 ns      848.661 ns        -        -        -          - 
+ StringReplace        replace8_1        replace13_1   text5_000      258.647 ns      0.2116 ns      0.1979 ns      258.604 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace13_1   text5_000    4,106.836 ns      5.7274 ns      5.3574 ns    4,106.393 ns        -        -        -          - 
+ StringReplace        replace8_1        replace13_1  text10_000      533.774 ns      0.8793 ns      0.7795 ns      533.767 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace13_1  text10_000    8,412.127 ns     13.7888 ns     12.8980 ns    8,412.929 ns        -        -        -          - 
+ StringReplace        replace8_1        replace13_1  text50_000    3,156.592 ns     19.6542 ns     15.3447 ns    3,160.815 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace13_1  text50_000   42,233.027 ns     89.0796 ns     83.3251 ns   42,237.683 ns        -        -        -          - 
+ StringReplace        replace8_1        replace21_1      text10       11.282 ns      0.0385 ns      0.0361 ns       11.277 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace21_1      text10       57.418 ns      0.0436 ns      0.0408 ns       57.439 ns        -        -        -          - 
+ StringReplace        replace8_1        replace21_1      text50       14.990 ns      0.0194 ns      0.0172 ns       14.994 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace21_1      text50       98.381 ns      0.2607 ns      0.2177 ns       98.436 ns        -        -        -          - 
+ StringReplace        replace8_1        replace21_1     text100       17.537 ns      0.0116 ns      0.0103 ns       17.542 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace21_1     text100      135.645 ns      0.0981 ns      0.0870 ns      135.626 ns        -        -        -          - 
+ StringReplace        replace8_1        replace21_1     text500       31.455 ns      0.0317 ns      0.0281 ns       31.451 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace21_1     text500      457.545 ns      1.3626 ns      1.2746 ns      457.995 ns        -        -        -          - 
+ StringReplace        replace8_1        replace21_1   text1_000       67.887 ns      0.4458 ns      0.4170 ns       67.980 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace21_1   text1_000      850.111 ns      1.7169 ns      1.4337 ns      850.432 ns        -        -        -          - 
+ StringReplace        replace8_1        replace21_1   text5_000      260.321 ns      0.4025 ns      0.3765 ns      260.313 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace21_1   text5_000    4,106.289 ns      9.5639 ns      8.9461 ns    4,108.234 ns        -        -        -          - 
+ StringReplace        replace8_1        replace21_1  text10_000      532.516 ns      4.1451 ns      3.4614 ns      533.846 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace21_1  text10_000    8,416.621 ns     10.3607 ns      9.6914 ns    8,417.584 ns        -        -        -          - 
+ StringReplace        replace8_1        replace21_1  text50_000    2,955.334 ns      9.2333 ns      8.6369 ns    2,957.452 ns        -        -        -          - 
+ RegexrReplace        replace8_1        replace21_1  text50_000   42,171.198 ns     97.6584 ns     86.5716 ns   42,204.819 ns        -        -        -          - 
+ StringReplace       replace13_1         replace1_1      text10        7.987 ns      0.0126 ns      0.0112 ns        7.987 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace1_1      text10       47.859 ns      0.0579 ns      0.0513 ns       47.863 ns        -        -        -          - 
+ StringReplace       replace13_1         replace1_1      text50       15.067 ns      0.0385 ns      0.0341 ns       15.071 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace1_1      text50       73.638 ns      0.1749 ns      0.1550 ns       73.578 ns        -        -        -          - 
+ StringReplace       replace13_1         replace1_1     text100       18.132 ns      0.0324 ns      0.0303 ns       18.139 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace1_1     text100      108.432 ns      0.4041 ns      0.3780 ns      108.534 ns        -        -        -          - 
+ StringReplace       replace13_1         replace1_1     text500       32.504 ns      0.0553 ns      0.0518 ns       32.508 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace1_1     text500      359.382 ns      1.2957 ns      1.1486 ns      359.478 ns        -        -        -          - 
+ StringReplace       replace13_1         replace1_1   text1_000       58.048 ns      0.1508 ns      0.1337 ns       58.079 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace1_1   text1_000      646.748 ns      0.6269 ns      0.5557 ns      646.771 ns        -        -        -          - 
+ StringReplace       replace13_1         replace1_1   text5_000      231.198 ns      0.2510 ns      0.2096 ns      231.278 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace1_1   text5_000    3,139.863 ns      6.3760 ns      5.9641 ns    3,140.840 ns        -        -        -          - 
+ StringReplace       replace13_1         replace1_1  text10_000      467.828 ns      1.1575 ns      1.0827 ns      468.144 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace1_1  text10_000    6,381.625 ns      6.4388 ns      5.7078 ns    6,379.048 ns        -        -        -          - 
+ StringReplace       replace13_1         replace1_1  text50_000    2,515.516 ns      7.0027 ns      6.5503 ns    2,514.388 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace1_1  text50_000   31,948.277 ns     20.1943 ns     18.8898 ns   31,944.385 ns        -        -        -          - 
+ StringReplace       replace13_1         replace2_1      text10        7.989 ns      0.0149 ns      0.0139 ns        7.994 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace2_1      text10       48.811 ns      0.1605 ns      0.1423 ns       48.760 ns        -        -        -          - 
+ StringReplace       replace13_1         replace2_1      text50       15.719 ns      0.0382 ns      0.0357 ns       15.727 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace2_1      text50       74.249 ns      0.1212 ns      0.1012 ns       74.244 ns        -        -        -          - 
+ StringReplace       replace13_1         replace2_1     text100       18.130 ns      0.0171 ns      0.0160 ns       18.133 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace2_1     text100      108.468 ns      0.0768 ns      0.0681 ns      108.494 ns        -        -        -          - 
+ StringReplace       replace13_1         replace2_1     text500       32.642 ns      0.1157 ns      0.0966 ns       32.666 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace2_1     text500      361.486 ns      0.3600 ns      0.3191 ns      361.399 ns        -        -        -          - 
+ StringReplace       replace13_1         replace2_1   text1_000       58.197 ns      0.0434 ns      0.0406 ns       58.185 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace2_1   text1_000      646.131 ns      0.9401 ns      0.8334 ns      646.207 ns        -        -        -          - 
+ StringReplace       replace13_1         replace2_1   text5_000      234.959 ns      0.7026 ns      0.6228 ns      235.178 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace2_1   text5_000    3,143.481 ns      4.8269 ns      4.5151 ns    3,144.316 ns        -        -        -          - 
+ StringReplace       replace13_1         replace2_1  text10_000      478.207 ns      7.0672 ns      6.6107 ns      475.139 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace2_1  text10_000    6,315.805 ns      4.5977 ns      3.8393 ns    6,315.844 ns        -        -        -          - 
+ StringReplace       replace13_1         replace2_1  text50_000    2,479.482 ns      3.9477 ns      3.6927 ns    2,478.973 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace2_1  text50_000   31,862.335 ns     74.1010 ns     65.6886 ns   31,873.016 ns        -        -        -          - 
+ StringReplace       replace13_1         replace3_1      text10        7.990 ns      0.0092 ns      0.0077 ns        7.991 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace3_1      text10       52.106 ns      0.0677 ns      0.0600 ns       52.116 ns        -        -        -          - 
+ StringReplace       replace13_1         replace3_1      text50       15.074 ns      0.0283 ns      0.0221 ns       15.072 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace3_1      text50       73.709 ns      0.1419 ns      0.1108 ns       73.692 ns        -        -        -          - 
+ StringReplace       replace13_1         replace3_1     text100       19.050 ns      0.0368 ns      0.0344 ns       19.052 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace3_1     text100      111.701 ns      0.5584 ns      0.5223 ns      111.969 ns        -        -        -          - 
+ StringReplace       replace13_1         replace3_1     text500       32.614 ns      0.0554 ns      0.0462 ns       32.616 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace3_1     text500      358.499 ns      0.5823 ns      0.5447 ns      358.643 ns        -        -        -          - 
+ StringReplace       replace13_1         replace3_1   text1_000       57.198 ns      0.1483 ns      0.1388 ns       57.247 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace3_1   text1_000      634.139 ns      0.7335 ns      0.6861 ns      634.355 ns        -        -        -          - 
+ StringReplace       replace13_1         replace3_1   text5_000      231.278 ns      0.2644 ns      0.2207 ns      231.241 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace3_1   text5_000    3,141.819 ns      2.6526 ns      2.3515 ns    3,142.309 ns        -        -        -          - 
+ StringReplace       replace13_1         replace3_1  text10_000      477.254 ns      6.1399 ns      5.4429 ns      475.200 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace3_1  text10_000    6,309.280 ns      5.1091 ns      4.5291 ns    6,308.630 ns        -        -        -          - 
+ StringReplace       replace13_1         replace3_1  text50_000    2,509.039 ns      7.3408 ns      6.5075 ns    2,507.032 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace3_1  text50_000   32,174.384 ns     13.1404 ns     11.6486 ns   32,174.203 ns        -        -        -          - 
+ StringReplace       replace13_1         replace5_1      text10        7.988 ns      0.0099 ns      0.0083 ns        7.988 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace5_1      text10       49.336 ns      0.1276 ns      0.1131 ns       49.377 ns        -        -        -          - 
+ StringReplace       replace13_1         replace5_1      text50       15.066 ns      0.0465 ns      0.0412 ns       15.079 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace5_1      text50       75.675 ns      0.0566 ns      0.0501 ns       75.685 ns        -        -        -          - 
+ StringReplace       replace13_1         replace5_1     text100       18.142 ns      0.0170 ns      0.0159 ns       18.147 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace5_1     text100      110.103 ns      0.0674 ns      0.0631 ns      110.107 ns        -        -        -          - 
+ StringReplace       replace13_1         replace5_1     text500       32.015 ns      0.1067 ns      0.0946 ns       32.027 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace5_1     text500      357.600 ns      1.1021 ns      1.0309 ns      357.907 ns        -        -        -          - 
+ StringReplace       replace13_1         replace5_1   text1_000       57.718 ns      0.0635 ns      0.0563 ns       57.717 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace5_1   text1_000      643.191 ns      0.5590 ns      0.5229 ns      643.284 ns        -        -        -          - 
+ StringReplace       replace13_1         replace5_1   text5_000      230.881 ns      0.5600 ns      0.4964 ns      231.043 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace5_1   text5_000    3,136.091 ns      4.5914 ns      3.8340 ns    3,136.245 ns        -        -        -          - 
+ StringReplace       replace13_1         replace5_1  text10_000      470.062 ns      1.1296 ns      1.0567 ns      469.698 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace5_1  text10_000    6,294.506 ns      3.6207 ns      3.2096 ns    6,294.976 ns        -        -        -          - 
+ StringReplace       replace13_1         replace5_1  text50_000    2,520.718 ns      6.2998 ns      5.8928 ns    2,520.101 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace5_1  text50_000   31,815.503 ns     24.7619 ns     19.3324 ns   31,813.950 ns        -        -        -          - 
+ StringReplace       replace13_1         replace8_1      text10        7.997 ns      0.0091 ns      0.0076 ns        7.997 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace8_1      text10       48.713 ns      0.2094 ns      0.1959 ns       48.795 ns        -        -        -          - 
+ StringReplace       replace13_1         replace8_1      text50       15.078 ns      0.0192 ns      0.0179 ns       15.079 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace8_1      text50       76.393 ns      0.3378 ns      0.2821 ns       76.503 ns        -        -        -          - 
+ StringReplace       replace13_1         replace8_1     text100       17.368 ns      0.0375 ns      0.0351 ns       17.376 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace8_1     text100      114.322 ns      0.1577 ns      0.1317 ns      114.343 ns        -        -        -          - 
+ StringReplace       replace13_1         replace8_1     text500       32.003 ns      0.0273 ns      0.0242 ns       32.005 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace8_1     text500      358.527 ns      0.6640 ns      0.5886 ns      358.639 ns        -        -        -          - 
+ StringReplace       replace13_1         replace8_1   text1_000       57.054 ns      0.2107 ns      0.1868 ns       57.055 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace8_1   text1_000      646.188 ns      0.3598 ns      0.2809 ns      646.184 ns        -        -        -          - 
+ StringReplace       replace13_1         replace8_1   text5_000      234.539 ns      0.3080 ns      0.2572 ns      234.604 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace8_1   text5_000    3,141.723 ns      5.4739 ns      4.5709 ns    3,140.977 ns        -        -        -          - 
+ StringReplace       replace13_1         replace8_1  text10_000      465.791 ns      1.6738 ns      1.5657 ns      466.323 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace8_1  text10_000    6,300.093 ns      7.4701 ns      6.2379 ns    6,299.162 ns        -        -        -          - 
+ StringReplace       replace13_1         replace8_1  text50_000    2,484.216 ns      7.2790 ns      6.8087 ns    2,486.964 ns        -        -        -          - 
+ RegexrReplace       replace13_1         replace8_1  text50_000   31,846.967 ns     30.7209 ns     25.6534 ns   31,845.911 ns        -        -        -          - 
+ StringReplace       replace13_1        replace13_1      text10        7.965 ns      0.0082 ns      0.0076 ns        7.965 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace13_1      text10       44.826 ns      0.1129 ns      0.0943 ns       44.850 ns        -        -        -          - 
+ StringReplace       replace13_1        replace13_1      text50       16.477 ns      0.0419 ns      0.0372 ns       16.485 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace13_1      text50       80.109 ns      0.5234 ns      0.4896 ns       79.907 ns        -        -        -          - 
+ StringReplace       replace13_1        replace13_1     text100       19.091 ns      0.0363 ns      0.0339 ns       19.093 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace13_1     text100      108.582 ns      1.2532 ns      1.1722 ns      108.125 ns        -        -        -          - 
+ StringReplace       replace13_1        replace13_1     text500       32.015 ns      0.0739 ns      0.0655 ns       32.037 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace13_1     text500      364.183 ns      0.6802 ns      0.6362 ns      364.379 ns        -        -        -          - 
+ StringReplace       replace13_1        replace13_1   text1_000       58.974 ns      0.1299 ns      0.1085 ns       58.952 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace13_1   text1_000      632.840 ns      0.5097 ns      0.3980 ns      632.862 ns        -        -        -          - 
+ StringReplace       replace13_1        replace13_1   text5_000      231.537 ns      0.4416 ns      0.3688 ns      231.633 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace13_1   text5_000    3,128.444 ns      9.4877 ns      8.4106 ns    3,131.501 ns        -        -        -          - 
+ StringReplace       replace13_1        replace13_1  text10_000      477.018 ns      0.6015 ns      0.5332 ns      477.091 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace13_1  text10_000    6,291.819 ns      2.8747 ns      2.6890 ns    6,292.391 ns        -        -        -          - 
+ StringReplace       replace13_1        replace13_1  text50_000    2,510.915 ns     10.8285 ns      9.0422 ns    2,509.776 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace13_1  text50_000   31,861.823 ns     21.6362 ns     18.0672 ns   31,857.141 ns        -        -        -          - 
+ StringReplace       replace13_1        replace21_1      text10        7.984 ns      0.0083 ns      0.0078 ns        7.985 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace21_1      text10       54.806 ns      0.3795 ns      0.2963 ns       54.800 ns        -        -        -          - 
+ StringReplace       replace13_1        replace21_1      text50       15.828 ns      0.0346 ns      0.0323 ns       15.832 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace21_1      text50       75.303 ns      0.1886 ns      0.1672 ns       75.348 ns        -        -        -          - 
+ StringReplace       replace13_1        replace21_1     text100       18.131 ns      0.0165 ns      0.0138 ns       18.135 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace21_1     text100      109.288 ns      0.2651 ns      0.2350 ns      109.341 ns        -        -        -          - 
+ StringReplace       replace13_1        replace21_1     text500       31.982 ns      0.0370 ns      0.0309 ns       31.978 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace21_1     text500      358.318 ns      0.7611 ns      0.7120 ns      358.517 ns        -        -        -          - 
+ StringReplace       replace13_1        replace21_1   text1_000       57.391 ns      0.1061 ns      0.0886 ns       57.368 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace21_1   text1_000      631.922 ns      2.8100 ns      2.3465 ns      632.671 ns        -        -        -          - 
+ StringReplace       replace13_1        replace21_1   text5_000      232.894 ns      1.0945 ns      0.8545 ns      233.249 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace21_1   text5_000    3,132.693 ns      5.2436 ns      4.6483 ns    3,134.209 ns        -        -        -          - 
+ StringReplace       replace13_1        replace21_1  text10_000      476.712 ns      1.0076 ns      0.9425 ns      476.984 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace21_1  text10_000    6,311.583 ns     13.7587 ns     11.4892 ns    6,314.343 ns        -        -        -          - 
+ StringReplace       replace13_1        replace21_1  text50_000    2,506.243 ns      7.1233 ns      6.6631 ns    2,508.590 ns        -        -        -          - 
+ RegexrReplace       replace13_1        replace21_1  text50_000   31,837.312 ns     49.4699 ns     41.3096 ns   31,843.555 ns        -        -        -          - 
+ StringReplace       replace21_1         replace1_1      text10        7.939 ns      0.0185 ns      0.0164 ns        7.943 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace1_1      text10       49.329 ns      0.1103 ns      0.0978 ns       49.341 ns        -        -        -          - 
+ StringReplace       replace21_1         replace1_1      text50       15.060 ns      0.0190 ns      0.0178 ns       15.060 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace1_1      text50       59.888 ns      1.1673 ns      1.0919 ns       60.376 ns        -        -        -          - 
+ StringReplace       replace21_1         replace1_1     text100       17.481 ns      0.0294 ns      0.0245 ns       17.489 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace1_1     text100       79.974 ns      0.3695 ns      0.3456 ns       79.774 ns        -        -        -          - 
+ StringReplace       replace21_1         replace1_1     text500       31.593 ns      0.0798 ns      0.0667 ns       31.607 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace1_1     text500      211.555 ns      0.7611 ns      0.7119 ns      211.819 ns        -        -        -          - 
+ StringReplace       replace21_1         replace1_1   text1_000       57.019 ns      0.0563 ns      0.0470 ns       57.021 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace1_1   text1_000      372.119 ns      1.2239 ns      1.0850 ns      372.635 ns        -        -        -          - 
+ StringReplace       replace21_1         replace1_1   text5_000      229.257 ns      0.7949 ns      0.7436 ns      229.561 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace1_1   text5_000    1,637.348 ns      2.1879 ns      1.9395 ns    1,637.225 ns        -        -        -          - 
+ StringReplace       replace21_1         replace1_1  text10_000    1,642.501 ns      8.8599 ns      8.2875 ns    1,644.213 ns   4.2362        -        -    19984 B 
+ RegexrReplace       replace21_1         replace1_1  text10_000    5,207.298 ns     13.6102 ns     11.3651 ns    5,207.082 ns   4.2343        -        -    19984 B 
+ StringReplace       replace21_1         replace1_1  text50_000   33,860.332 ns    144.9820 ns    135.6162 ns   33,925.873 ns  31.1890  31.1890  31.1890    99923 B 
+ RegexrReplace       replace21_1         replace1_1  text50_000   51,698.063 ns    196.6558 ns    174.3303 ns   51,744.278 ns  31.1890  31.1890  31.1890    99933 B 
+ StringReplace       replace21_1         replace2_1      text10        7.978 ns      0.0217 ns      0.0192 ns        7.983 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace2_1      text10       50.710 ns      0.0340 ns      0.0301 ns       50.712 ns        -        -        -          - 
+ StringReplace       replace21_1         replace2_1      text50       15.062 ns      0.0224 ns      0.0210 ns       15.067 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace2_1      text50       60.220 ns      0.2839 ns      0.2370 ns       60.320 ns        -        -        -          - 
+ StringReplace       replace21_1         replace2_1     text100       18.260 ns      0.0442 ns      0.0414 ns       18.273 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace2_1     text100       79.119 ns      0.0995 ns      0.0931 ns       79.117 ns        -        -        -          - 
+ StringReplace       replace21_1         replace2_1     text500       32.308 ns      0.1368 ns      0.1279 ns       32.338 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace2_1     text500      214.168 ns      0.7637 ns      0.6377 ns      214.331 ns        -        -        -          - 
+ StringReplace       replace21_1         replace2_1   text1_000       56.137 ns      0.1408 ns      0.1248 ns       56.167 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace2_1   text1_000      373.434 ns      0.4986 ns      0.4664 ns      373.609 ns        -        -        -          - 
+ StringReplace       replace21_1         replace2_1   text5_000      229.594 ns      0.3778 ns      0.3534 ns      229.608 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace2_1   text5_000    1,634.233 ns      6.4393 ns      5.7083 ns    1,635.559 ns        -        -        -          - 
+ StringReplace       replace21_1         replace2_1  text10_000    1,667.700 ns     16.9449 ns     15.8503 ns    1,667.068 ns   4.2362        -        -    19992 B 
+ RegexrReplace       replace21_1         replace2_1  text10_000    5,215.633 ns     30.6195 ns     28.6415 ns    5,213.972 ns   4.2343        -        -    19992 B 
+ StringReplace       replace21_1         replace2_1  text50_000   33,672.138 ns    126.2067 ns    111.8789 ns   33,693.521 ns  31.1890  31.1890  31.1890    99931 B 
+ RegexrReplace       replace21_1         replace2_1  text50_000   51,680.468 ns    119.8270 ns    112.0862 ns   51,674.341 ns  31.1890  31.1890  31.1890    99941 B 
+ StringReplace       replace21_1         replace3_1      text10        7.966 ns      0.0396 ns      0.0331 ns        7.981 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace3_1      text10       50.440 ns      0.9677 ns      0.9051 ns       49.817 ns        -        -        -          - 
+ StringReplace       replace21_1         replace3_1      text50       15.605 ns      0.0820 ns      0.0640 ns       15.625 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace3_1      text50       59.726 ns      0.1031 ns      0.0964 ns       59.766 ns        -        -        -          - 
+ StringReplace       replace21_1         replace3_1     text100       18.267 ns      0.0367 ns      0.0343 ns       18.270 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace3_1     text100       81.031 ns      0.2130 ns      0.1888 ns       81.070 ns        -        -        -          - 
+ StringReplace       replace21_1         replace3_1     text500       31.605 ns      0.0337 ns      0.0315 ns       31.611 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace3_1     text500      213.852 ns      0.6160 ns      0.5762 ns      214.080 ns        -        -        -          - 
+ StringReplace       replace21_1         replace3_1   text1_000       56.113 ns      0.1804 ns      0.1599 ns       56.163 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace3_1   text1_000      375.546 ns      0.2881 ns      0.2406 ns      375.594 ns        -        -        -          - 
+ StringReplace       replace21_1         replace3_1   text5_000      228.143 ns      0.7040 ns      0.6241 ns      228.289 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace3_1   text5_000    1,637.279 ns      5.2834 ns      4.9421 ns    1,640.535 ns        -        -        -          - 
+ StringReplace       replace21_1         replace3_1  text10_000    1,639.965 ns     11.8368 ns     11.0721 ns    1,638.715 ns   4.2362        -        -    19992 B 
+ RegexrReplace       replace21_1         replace3_1  text10_000    5,212.277 ns     17.0843 ns     15.1448 ns    5,212.482 ns   4.2343        -        -    19992 B 
+ StringReplace       replace21_1         replace3_1  text50_000   33,814.073 ns    118.5222 ns    110.8657 ns   33,786.542 ns  31.1890  31.1890  31.1890    99931 B 
+ RegexrReplace       replace21_1         replace3_1  text50_000   51,515.595 ns    192.4647 ns    180.0316 ns   51,486.066 ns  31.1890  31.1890  31.1890    99941 B 
+ StringReplace       replace21_1         replace5_1      text10        7.988 ns      0.0095 ns      0.0074 ns        7.985 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace5_1      text10       49.228 ns      0.2342 ns      0.1956 ns       49.325 ns        -        -        -          - 
+ StringReplace       replace21_1         replace5_1      text50       15.619 ns      0.0318 ns      0.0266 ns       15.620 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace5_1      text50       56.375 ns      0.0870 ns      0.0814 ns       56.394 ns        -        -        -          - 
+ StringReplace       replace21_1         replace5_1     text100       17.481 ns      0.0739 ns      0.0655 ns       17.501 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace5_1     text100       77.180 ns      0.1306 ns      0.1158 ns       77.214 ns        -        -        -          - 
+ StringReplace       replace21_1         replace5_1     text500       31.634 ns      0.1663 ns      0.1556 ns       31.564 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace5_1     text500      215.232 ns      1.2978 ns      1.1504 ns      215.511 ns        -        -        -          - 
+ StringReplace       replace21_1         replace5_1   text1_000       56.448 ns      0.1387 ns      0.1230 ns       56.459 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace5_1   text1_000      374.629 ns      0.9145 ns      0.8554 ns      374.870 ns        -        -        -          - 
+ StringReplace       replace21_1         replace5_1   text5_000      229.670 ns      0.0790 ns      0.0659 ns      229.661 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace5_1   text5_000    1,631.789 ns      1.6452 ns      1.5389 ns    1,631.882 ns        -        -        -          - 
+ StringReplace       replace21_1         replace5_1  text10_000    1,654.896 ns     17.0458 ns     14.2341 ns    1,659.523 ns   4.2362        -        -    19992 B 
+ RegexrReplace       replace21_1         replace5_1  text10_000    5,822.466 ns     21.5112 ns     20.1216 ns    5,821.513 ns   4.2343        -        -    19992 B 
+ StringReplace       replace21_1         replace5_1  text50_000   33,701.399 ns    165.4557 ns    154.7673 ns   33,732.666 ns  31.1890  31.1890  31.1890    99947 B 
+ RegexrReplace       replace21_1         replace5_1  text50_000   51,662.958 ns    143.1469 ns    133.8997 ns   51,681.628 ns  31.1890  31.1890  31.1890    99957 B 
+ StringReplace       replace21_1         replace8_1      text10        7.987 ns      0.0075 ns      0.0063 ns        7.986 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace8_1      text10       48.067 ns      0.5201 ns      0.4865 ns       47.826 ns        -        -        -          - 
+ StringReplace       replace21_1         replace8_1      text50       15.610 ns      0.0455 ns      0.0426 ns       15.621 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace8_1      text50       60.619 ns      0.0932 ns      0.0826 ns       60.639 ns        -        -        -          - 
+ StringReplace       replace21_1         replace8_1     text100       18.254 ns      0.0529 ns      0.0495 ns       18.270 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace8_1     text100       77.912 ns      0.0689 ns      0.0576 ns       77.915 ns        -        -        -          - 
+ StringReplace       replace21_1         replace8_1     text500       31.555 ns      0.0222 ns      0.0173 ns       31.559 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace8_1     text500      214.463 ns      0.7089 ns      0.6285 ns      214.644 ns        -        -        -          - 
+ StringReplace       replace21_1         replace8_1   text1_000       56.199 ns      0.1927 ns      0.1609 ns       56.246 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace8_1   text1_000      374.829 ns      0.2350 ns      0.2084 ns      374.837 ns        -        -        -          - 
+ StringReplace       replace21_1         replace8_1   text5_000      229.529 ns      0.2179 ns      0.2038 ns      229.569 ns        -        -        -          - 
+ RegexrReplace       replace21_1         replace8_1   text5_000    1,631.797 ns      0.8747 ns      0.7304 ns    1,631.917 ns        -        -        -          - 
+ StringReplace       replace21_1         replace8_1  text10_000    1,665.432 ns      8.8343 ns      8.2636 ns    1,665.255 ns   4.2362        -        -    20000 B 
+ RegexrReplace       replace21_1         replace8_1  text10_000    5,185.228 ns     20.1794 ns     17.8885 ns    5,181.414 ns   4.2343        -        -    20000 B 
+ StringReplace       replace21_1         replace8_1  text50_000   33,682.974 ns     51.7321 ns     43.1987 ns   33,677.112 ns  31.1890  31.1890  31.1890    99955 B 
+ RegexrReplace       replace21_1         replace8_1  text50_000   51,310.345 ns    180.4380 ns    159.9536 ns   51,310.629 ns  31.1890  31.1890  31.1890    99965 B 
+ StringReplace       replace21_1        replace13_1      text10        7.984 ns      0.0108 ns      0.0096 ns        7.984 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace13_1      text10       49.725 ns      0.1352 ns      0.1129 ns       49.751 ns        -        -        -          - 
+ StringReplace       replace21_1        replace13_1      text50       15.895 ns      0.0322 ns      0.0302 ns       15.901 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace13_1      text50       58.172 ns      0.2282 ns      0.2023 ns       58.225 ns        -        -        -          - 
+ StringReplace       replace21_1        replace13_1     text100       17.484 ns      0.0329 ns      0.0308 ns       17.487 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace13_1     text100       81.772 ns      0.0515 ns      0.0456 ns       81.789 ns        -        -        -          - 
+ StringReplace       replace21_1        replace13_1     text500       32.229 ns      0.1704 ns      0.1511 ns       32.284 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace13_1     text500      211.269 ns      0.7379 ns      0.6162 ns      211.489 ns        -        -        -          - 
+ StringReplace       replace21_1        replace13_1   text1_000       57.255 ns      0.0503 ns      0.0420 ns       57.270 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace13_1   text1_000      370.542 ns      0.1423 ns      0.1262 ns      370.535 ns        -        -        -          - 
+ StringReplace       replace21_1        replace13_1   text5_000      229.964 ns      0.6658 ns      0.5902 ns      230.105 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace13_1   text5_000    1,624.491 ns      1.9339 ns      1.7144 ns    1,625.031 ns        -        -        -          - 
+ StringReplace       replace21_1        replace13_1  text10_000    1,651.371 ns     12.1227 ns     11.3395 ns    1,654.004 ns   4.2362        -        -    20008 B 
+ RegexrReplace       replace21_1        replace13_1  text10_000    5,213.850 ns     17.7336 ns     15.7204 ns    5,215.847 ns   4.2343        -        -    20008 B 
+ StringReplace       replace21_1        replace13_1  text50_000   33,550.509 ns    149.3813 ns    132.4227 ns   33,519.479 ns  31.1890  31.1890  31.1890    99987 B 
+ RegexrReplace       replace21_1        replace13_1  text50_000   51,211.540 ns    144.3029 ns    127.9208 ns   51,186.377 ns  31.1890  31.1890  31.1890    99997 B 
+ StringReplace       replace21_1        replace21_1      text10        7.978 ns      0.0135 ns      0.0126 ns        7.983 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace21_1      text10       50.748 ns      0.0595 ns      0.0527 ns       50.763 ns        -        -        -          - 
+ StringReplace       replace21_1        replace21_1      text50       15.867 ns      0.1013 ns      0.0846 ns       15.897 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace21_1      text50       59.967 ns      0.0552 ns      0.0431 ns       59.976 ns        -        -        -          - 
+ StringReplace       replace21_1        replace21_1     text100       17.492 ns      0.0216 ns      0.0181 ns       17.498 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace21_1     text100       82.902 ns      1.5711 ns      1.4696 ns       83.211 ns        -        -        -          - 
+ StringReplace       replace21_1        replace21_1     text500       32.278 ns      0.1118 ns      0.1045 ns       32.301 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace21_1     text500      213.466 ns      0.1337 ns      0.1117 ns      213.479 ns        -        -        -          - 
+ StringReplace       replace21_1        replace21_1   text1_000       56.772 ns      0.0776 ns      0.0605 ns       56.784 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace21_1   text1_000      373.621 ns      2.3724 ns      2.2192 ns      372.511 ns        -        -        -          - 
+ StringReplace       replace21_1        replace21_1   text5_000      231.029 ns      0.6297 ns      0.5582 ns      230.952 ns        -        -        -          - 
+ RegexrReplace       replace21_1        replace21_1   text5_000    1,633.071 ns      1.4882 ns      1.2427 ns    1,633.133 ns        -        -        -          - 
+ StringReplace       replace21_1        replace21_1  text10_000    1,659.557 ns     19.4666 ns     17.2567 ns    1,659.999 ns   4.2362        -        -    20024 B 
+ RegexrReplace       replace21_1        replace21_1  text10_000    5,185.634 ns     18.3892 ns     16.3016 ns    5,182.015 ns   4.2343        -        -    20024 B 
+ StringReplace       replace21_1        replace21_1  text50_000   33,912.686 ns     99.5847 ns     83.1578 ns   33,894.794 ns  31.1890  31.1890  31.1890   100035 B 
+ RegexrReplace       replace21_1        replace21_1  text50_000   51,611.612 ns    206.5244 ns    183.0785 ns   51,713.287 ns  31.1890  31.1890  31.1890   100045 B 
