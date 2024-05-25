@@ -1,0 +1,44 @@
+docker run -d --name speedtest-tracker --restart unless-stopped \
+    -p 9001:80 \
+    -e PUID=1000 \
+    -e PGID=1000 \
+    -e DB_CONNECTION=pgsql \
+    -e DB_HOST=172.17.0.3 \
+    -e DB_PORT=5432 \
+    -e DB_DATABASE=speedtest_tracker \
+    -e DB_USERNAME=postgres \
+    -e DB_PASSWORD=postgres \
+    -v /var/lib/docker/volumes/speedtest/config:/config \
+    lscr.io/linuxserver/speedtest-tracker:latest
+
+
+`https://nerdfilmes.com.br/`
+docker run -d \
+    --name=qbittorrent \
+    -e PUID=1000 \
+    -e PGID=1000 \
+    -e TZ=Etc/UTC \
+    -e WEBUI_PORT=8080 \
+    -e TORRENTING_PORT=6881 \
+    -p 9002:8080 \
+    -p 6881:6881 \
+    -p 6881:6881/udp \
+    -v /var/lib/docker/volumes/qbittorrent/config:/config \
+    -v /var/lib/docker/volumes/qbittorrent/downloads:/downloads \
+    -v /var/lib/docker/volumes/qbittorrent/watch:/watch \
+    --restart unless-stopped \
+    lscr.io/linuxserver/qbittorrent:latest
+
+
+
+docker run -d \
+    --name=emby \
+    -e PUID=1000 \
+    -e PGID=1000 \
+    -e TZ=Etc/UTC \
+    -p 9003:8096 \
+    -v /var/lib/docker/volumes/emby/config:/config \
+    -v /var/lib/docker/volumes/emby/data/tvshows:/data/tvshows \
+    -v /var/lib/docker/volumes/qbittorrent/downloads:/data/movies \
+    --restart unless-stopped \
+    lscr.io/linuxserver/emby:latest
