@@ -1,13 +1,27 @@
-docker run -d --name speedtest-tracker --restart unless-stopped \
+docker network create internal-network
+
+docker run -d \
+  --name postgres \
+  --network internal-network \
+  --network-alias postgres \
+  -e POSTGRES_PASSWORD=postgres \
+  -p 5432:5432 \
+  postgres
+
+
+docker run -d --name speedtest-tracker \
+    --restart unless-stopped \
+    --network internal-network \
     -p 9001:80 \
     -e PUID=1000 \
     -e PGID=1000 \
     -e DB_CONNECTION=pgsql \
-    -e DB_HOST=172.17.0.3 \
+    -e DB_HOST=postgres \
     -e DB_PORT=5432 \
     -e DB_DATABASE=speedtest_tracker \
     -e DB_USERNAME=postgres \
     -e DB_PASSWORD=postgres \
+    -e APP_KEY=base64:yLO/yMt/lMiOn2ps9dS2AaVTqveCjwDLQsz8MLgVYnM= \
     -v /var/lib/docker/volumes/speedtest/config:/config \
     lscr.io/linuxserver/speedtest-tracker:latest
 
