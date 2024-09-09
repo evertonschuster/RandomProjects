@@ -22,8 +22,11 @@ docker run -d --name speedtest-tracker \
     -e DB_USERNAME=postgres \
     -e DB_PASSWORD=postgres \
     -e APP_KEY=base64:yLO/yMt/lMiOn2ps9dS2AaVTqveCjwDLQsz8MLgVYnM= \
+    -e SPEEDTEST_SCHEDULE='*/5 * * * *' \
+    -e PRUNE_RESULTS_OLDER_THAN=60 \
     -v /var/lib/docker/volumes/speedtest/config:/config \
     lscr.io/linuxserver/speedtest-tracker:latest
+
 
 
 `https://nerdfilmes.com.br/`
