@@ -2,11 +2,14 @@ docker network create internal-network
 
 docker run -d \
   --name postgres \
+  --restart unless-stopped \
   --network internal-network \
   --network-alias postgres \
   -e POSTGRES_PASSWORD=postgres \
+  -v /var/lib/docker/volumes/postgres/data:/var/lib/postgresql/data \
   -p 5432:5432 \
   postgres
+
 
 
 docker run -d --name speedtest-tracker \
