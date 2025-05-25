@@ -1,64 +1,97 @@
-docker network create internal-network
+version: "3.8"
 
-docker run -d \
-  --name postgres \
-  --restart unless-stopped \
-  --network internal-network \
-  --network-alias postgres \
-  -e POSTGRES_PASSWORD=postgres \
-  -v /var/lib/docker/volumes/postgres/data:/var/lib/postgresql/data \
-  -p 5432:5432 \
-  postgres
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    restart: unless-stopped
+    networks:
+      internal-network:
+        aliases:
+          - postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
 
+  speedtest-tracker:
+    image: lscr.io/linuxserver/speedtest-tracker:latest
+    container_name: speedtest-tracker
+    restart: unless-stopped
+    networks:
+      internal-network:
+        aliases:
+          - speedtest-tracker
+    ports:
+      - "9001:80"
+    environment:
+      PUID: 1000
+      PGID: 1000
+      DB_CONNECTION: pgsql
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_DATABASE: speedtest_tracker
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      APP_KEY: base64:yLO/yMt/lMiOn2ps9dS2AaVTqveCjwDLQsz8MLgVYnM=
+      SPEEDTEST_SCHEDULE: "*/5 * * * *"
+      PRUNE_RESULTS_OLDER_THAN: 60
+    volumes:
+      - speedtest_config:/config
 
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    restart: unless-stopped
+    networks:
+      internal-network:
+        aliases:
+          - qbittorrent
+    ports:
+      - "9002:8080"
+      - "6881:6881"
+      - "6881:6881/udp"
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: Etc/UTC
+      WEBUI_PORT: 8080
+      TORRENTING_PORT: 6881
+    volumes:
+      - qbittorrent_config:/config
+      - qbittorrent_downloads:/downloads
+      - qbittorrent_watch:/watch
 
-docker run -d --name speedtest-tracker \
-    --restart unless-stopped \
-    --network internal-network \
-    -p 9001:80 \
-    -e PUID=1000 \
-    -e PGID=1000 \
-    -e DB_CONNECTION=pgsql \
-    -e DB_HOST=postgres \
-    -e DB_PORT=5432 \
-    -e DB_DATABASE=speedtest_tracker \
-    -e DB_USERNAME=postgres \
-    -e DB_PASSWORD=postgres \
-    -e APP_KEY=base64:yLO/yMt/lMiOn2ps9dS2AaVTqveCjwDLQsz8MLgVYnM= \
-    -e SPEEDTEST_SCHEDULE='*/5 * * * *' \
-    -e PRUNE_RESULTS_OLDER_THAN=60 \
-    -v /var/lib/docker/volumes/speedtest/config:/config \
-    lscr.io/linuxserver/speedtest-tracker:latest
+  emby:
+    image: lscr.io/linuxserver/emby:latest
+    container_name: emby
+    restart: unless-stopped
+    networks:
+      internal-network:
+        aliases:
+          - emby
+    ports:
+      - "9003:8096"
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: Etc/UTC
+    volumes:
+      - emby_config:/config
+      - emby_tvshows:/data/tvshows
+      - qbittorrent_downloads:/data/movies  # Compartilhado com o qbittorrent
 
+volumes:
+  postgres_data:
+  speedtest_config:
+  qbittorrent_config:
+  qbittorrent_downloads:
+  qbittorrent_watch:
+  emby_config:
+  emby_tvshows:
 
-
-`https://nerdfilmes.com.br/`
-docker run -d \
-    --name=qbittorrent \
-    -e PUID=1000 \
-    -e PGID=1000 \
-    -e TZ=Etc/UTC \
-    -e WEBUI_PORT=8080 \
-    -e TORRENTING_PORT=6881 \
-    -p 9002:8080 \
-    -p 6881:6881 \
-    -p 6881:6881/udp \
-    -v /var/lib/docker/volumes/qbittorrent/config:/config \
-    -v /var/lib/docker/volumes/qbittorrent/downloads:/downloads \
-    -v /var/lib/docker/volumes/qbittorrent/watch:/watch \
-    --restart unless-stopped \
-    lscr.io/linuxserver/qbittorrent:latest
-
-
-
-docker run -d \
-    --name=emby \
-    -e PUID=1000 \
-    -e PGID=1000 \
-    -e TZ=Etc/UTC \
-    -p 9003:8096 \
-    -v /var/lib/docker/volumes/emby/config:/config \
-    -v /var/lib/docker/volumes/emby/data/tvshows:/data/tvshows \
-    -v /var/lib/docker/volumes/qbittorrent/downloads:/data/movies \
-    --restart unless-stopped \
-    lscr.io/linuxserver/emby:latest
+networks:
+  internal-network:
+    name: internal-network
